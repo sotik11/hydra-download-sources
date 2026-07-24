@@ -1,0 +1,10 @@
+{
+  "name": "hydra-download-sources",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Generators that build download-source JSON feeds (game repacks/torrents) for Hydra Launcher.",
+  "scripts": {
+    "gen:igruha": "node generators/torrent-igruha.mjs"
+  }
+}

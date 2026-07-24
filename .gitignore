@@ -1,0 +1,12 @@
+node_modules/
+*.log
+
+# secrets
+.env
+.env.local
+
+# local run backups / raw dumps — not source
+data/*.prev.json
+data/*.bak.json
+data/*.json.backup
+data/*.backup

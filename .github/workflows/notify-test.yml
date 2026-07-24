@@ -1,0 +1,41 @@
+name: notify-test
+
+# Sends one sample Telegram message using the repo secrets, to verify they are
+# set correctly. Does not touch the feed. Dispatch-only.
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  notify-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Telegram — sample
+        env:
+          TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          CHAT: ${{ secrets.TELEGRAM_CHAT_ID }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          if [ -z "$TOKEN" ] || [ -z "$CHAT" ]; then
+            echo "::error::TELEGRAM_BOT_TOKEN / TELEGRAM_CHAT_ID not set in this repo"
+            exit 1
+          fi
+          TOTAL=$(jq '.downloads | length' data/itorrents-igruha.json)
+          TEXT=$'\U0001F9EA <b>ТЕСТ уведомления</b> (hydra-download-sources)\n\n✅ <b>Torrent Igruha</b>\n<u>Всего</u> в фиде: <b>'"${TOTAL}"$'</b> игр\n\nЕсли видишь это — секреты заданы верно. <a href="'"${RUN_URL}"$'">run</a>'
+          code=$(curl -s -o /tmp/tg.json -w "%{http_code}" -X POST \
+            "https://api.telegram.org/bot${TOKEN}/sendMessage" \
+            --data-urlencode "chat_id=${CHAT}" \
+            --data-urlencode "parse_mode=HTML" \
+            --data-urlencode "disable_web_page_preview=true" \
+            --data-urlencode "text=${TEXT}")
+          echo "HTTP $code"
+          cat /tmp/tg.json
+          jq -e '.ok == true' /tmp/tg.json >/dev/null || {
+            echo "::error::Telegram rejected the message (see body above)"; exit 1;
+          }
+          echo "Telegram OK, message_id=$(jq '.result.message_id' /tmp/tg.json)"

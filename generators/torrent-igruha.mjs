@@ -18,7 +18,7 @@
  *   LIMIT=N     process only the first N game pages (slice test)
  *   POOL=N      concurrent workers (default 5)
  */
-import { writeFile } from "node:fs/promises";
+import { readFile, writeFile } from "node:fs/promises";
 import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 import { getBuffer, getText, mapPool, sleep } from "../lib/net.mjs";
@@ -26,12 +26,14 @@ import { torrentToMagnet } from "../lib/torrent.mjs";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const SITE = "https://itorrents-igruha.org";
-const NAME = "Торрент Игруха";
-const OUT = join(ROOT, "data", "torrent-igruha.json");
+const NAME = "Torrent Igruha";
+const OUT = process.env.OUT || join(ROOT, "data", "torrent-igruha.json");
+const STATE = process.env.STATE || join(ROOT, "data", "torrent-igruha.state.json");
 
 const LIMIT = Number(process.env.LIMIT) || 0;
 const SAMPLE = Number(process.env.SAMPLE) || 0; // spread-sample N across the sitemap
 const POOL = Number(process.env.POOL) || 5;
+const FULL = process.env.FULL === "1"; // ignore existing state, rebuild from scratch
 // Global request rate cap (requests/sec). 0 = unthrottled. Spacing every
 // request by 1000/RATE ms keeps the real throughput at RATE regardless of POOL,
 // so the site's WAF stays calm on the ~46k-request full run.
@@ -65,13 +67,19 @@ const decodeEntities = (s) =>
 const clean = (s) =>
   decodeEntities(s.replace(/<[^>]+>/g, " ")).replace(/\s+/g, " ").trim();
 
-/** All game-page URLs from the sitemap: /{id}-slug.html, excluding -download pages. */
+/** Game pages from the sitemap: [{ url, lastmod }] for /{id}-slug.html. */
 async function listGamePages() {
   const xml = await getText(`${SITE}/sitemap.xml`, { ms: 30000 });
-  const locs = [...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1]);
-  return locs.filter(
-    (u) => /\/\d+-[^/]+\.html$/.test(u) && !/-download\.html$/.test(u)
-  );
+  const out = [];
+  for (const block of xml.matchAll(/<url>([\s\S]*?)<\/url>/g)) {
+    const b = block[1];
+    const url = (b.match(/<loc>([^<]+)<\/loc>/) || [])[1];
+    if (!url || !/\/\d+-[^/]+\.html$/.test(url) || /-download\.html$/.test(url))
+      continue;
+    const lastmod = (b.match(/<lastmod>([^<]+)<\/lastmod>/) || [])[1] || "";
+    out.push({ url, lastmod });
+  }
+  return out;
 }
 
 // Skip reasons. "no-torrent"/"no-title" are genuine (the page loaded but has no
@@ -124,22 +132,31 @@ async function buildDownload(pageUrl) {
   return { download: { title, uris: [magnet], uploadDate, fileSize } };
 }
 
-/** Evenly spread N URLs across the whole list (fair diagnostic sample). */
-function spreadSample(urls, n) {
-  if (n >= urls.length) return urls;
-  const step = urls.length / n;
-  return Array.from({ length: n }, (_, i) => urls[Math.floor(i * step)]);
+/** Evenly spread N items across the whole list (fair diagnostic sample). */
+function spreadSample(items, n) {
+  if (n >= items.length) return items;
+  const step = items.length / n;
+  return Array.from({ length: n }, (_, i) => items[Math.floor(i * step)]);
 }
 
-async function runPass(urls, label) {
+/** Fetch a batch of {url,lastmod}; returns them enriched with download|skip. */
+async function runPass(items, label) {
   let done = 0;
-  const results = await mapPool(urls, POOL, async (url) => {
-    const r = await buildDownload(url);
+  return mapPool(items, POOL, async (item) => {
+    const r = await buildDownload(item.url);
     done += 1;
-    if (done % 250 === 0) console.log(`[igruha] ${label} ${done}/${urls.length}`);
-    return { url, ...r };
+    if (done % 250 === 0) console.log(`[igruha] ${label} ${done}/${items.length}`);
+    return { ...item, ...r };
   });
-  return results;
+}
+
+async function readState() {
+  if (FULL) return {};
+  try {
+    return JSON.parse(await readFile(STATE, "utf8"));
+  } catch {
+    return {}; // no state yet -> first run rebuilds everything
+  }
 }
 
 async function main() {
@@ -153,38 +170,65 @@ async function main() {
     console.log(`[igruha] LIMIT=${LIMIT} -> processing ${pages.length}`);
   }
 
-  let results = await runPass(pages, "pass1");
+  // Incremental: reuse cached entries whose sitemap lastmod is unchanged; only
+  // (re)fetch new or modified pages. State keeps no-torrent pages too (as
+  // download:null) so they aren't re-fetched every run until they change.
+  const prev = await readState();
+  const toFetch = [];
+  const nextState = {};
+  let reused = 0;
 
-  // Retry pass over transient failures only — recovers games dropped to a
-  // one-off timeout rather than a genuine missing distribution.
-  const retryUrls = results.filter((r) => TRANSIENT.has(r.skip)).map((r) => r.url);
-  if (retryUrls.length) {
-    console.log(`[igruha] retry: ${retryUrls.length} transient failures`);
-    const retried = await runPass(retryUrls, "retry");
-    const byUrl = new Map(retried.map((r) => [r.url, r]));
-    results = results.map((r) => (byUrl.has(r.url) ? byUrl.get(r.url) : r));
+  for (const page of pages) {
+    const cached = prev[page.url];
+    if (cached && cached.lastmod === page.lastmod) {
+      nextState[page.url] = cached;
+      reused += 1;
+    } else {
+      toFetch.push(page);
+    }
   }
 
-  const downloads = results.filter((r) => r.download).map((r) => r.download);
-
-  // Skip breakdown.
-  const reasons = {};
-  for (const r of results) if (r.skip) reasons[r.skip] = (reasons[r.skip] || 0) + 1;
-
-  await writeFile(
-    OUT,
-    `${JSON.stringify({ name: NAME, downloads }, null, 2)}\n`,
-    "utf8"
+  const added = toFetch.filter((p) => !prev[p.url]).length;
+  const updated = toFetch.length - added;
+  const removed = Object.keys(prev).filter(
+    (u) => !nextState[u] && !toFetch.some((p) => p.url === u)
+  ).length;
+  console.log(
+    `[igruha] reuse ${reused}, fetch ${toFetch.length} (new ${added}, changed ${updated}), drop ${removed}`
   );
+
+  let fetched = await runPass(toFetch, "fetch");
+  const retry = fetched.filter((r) => TRANSIENT.has(r.skip));
+  if (retry.length) {
+    console.log(`[igruha] retry: ${retry.length} transient failures`);
+    const again = await runPass(retry, "retry");
+    const byUrl = new Map(again.map((r) => [r.url, r]));
+    fetched = fetched.map((r) => byUrl.get(r.url) ?? r);
+  }
+
+  const reasons = {};
+  for (const r of fetched) {
+    nextState[r.url] = { lastmod: r.lastmod, download: r.download ?? null };
+    if (r.skip) reasons[r.skip] = (reasons[r.skip] || 0) + 1;
+  }
+
+  // Stable order (by url) so the committed feed has minimal git churn.
+  const downloads = Object.keys(nextState)
+    .sort()
+    .map((u) => nextState[u].download)
+    .filter(Boolean);
+
+  await writeFile(OUT, `${JSON.stringify({ name: NAME, downloads }, null, 2)}\n`, "utf8");
+  if (!SAMPLE) {
+    await writeFile(STATE, `${JSON.stringify(nextState)}\n`, "utf8");
+  }
 
   const brk = Object.entries(reasons)
     .sort((a, b) => b[1] - a[1])
     .map(([k, v]) => `${k}=${v}`)
     .join(", ");
   console.log(
-    `[igruha] done -> ${downloads.length} downloads, skipped ${
-      pages.length - downloads.length
-    } (${brk || "none"})`
+    `[igruha] done -> ${downloads.length} downloads (fetched ${toFetch.length}: ${brk || "all ok"})`
   );
 }
 

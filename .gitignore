@@ -5,6 +5,9 @@ node_modules/
 .env
 .env.local
 
+# incremental state — big, rebuilt on demand, persisted via Actions cache
+data/*.state.json
+
 # local run backups / raw dumps — not source
 data/*.prev.json
 data/*.bak.json

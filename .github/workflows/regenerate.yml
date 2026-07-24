@@ -1,0 +1,116 @@
+name: regenerate
+
+# Rebuilds data/torrent-igruha.json on a schedule.
+#
+# Incremental: the generator keeps a per-URL state (lastmod + built entry) in
+# data/torrent-igruha.state.json and only (re)fetches pages whose sitemap
+# lastmod changed. That state is gitignored and carried between runs via the
+# Actions cache, so a daily run touches a few hundred pages, not ~23k. The very
+# first run (cold cache) rebuilds the whole feed.
+
+on:
+  schedule:
+    - cron: "0 4 * * *" # daily, 04:00 UTC
+  workflow_dispatch:
+    inputs:
+      full:
+        description: "Ignore cached state and rebuild from scratch (slow)"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: regenerate
+  cancel-in-progress: false
+
+jobs:
+  regenerate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Restore incremental state
+        if: ${{ github.event.inputs.full != 'true' }}
+        uses: actions/cache/restore@v4
+        with:
+          path: data/torrent-igruha.state.json
+          key: igruha-state-${{ github.run_id }}
+          restore-keys: igruha-state-
+
+      - name: Regenerate feed
+        id: gen
+        env:
+          RATE: "12"
+          POOL: "4"
+          FULL: ${{ github.event.inputs.full == 'true' && '1' || '' }}
+        run: |
+          node generators/torrent-igruha.mjs | tee /tmp/gen.log
+          {
+            echo "total=$(jq '.downloads | length' data/torrent-igruha.json)"
+            echo "summary=$(grep 'done ->' /tmp/gen.log | tail -1 | sed 's/\[igruha\] //')"
+          } >> "$GITHUB_OUTPUT"
+
+      - name: Commit feed if changed
+        id: commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/torrent-igruha.json
+          if git diff --staged --quiet; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            git commit -m "data: refresh Torrent Igruha feed [skip ci]"
+            git push
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Save incremental state
+        if: always()
+        uses: actions/cache/save@v4
+        with:
+          path: data/torrent-igruha.state.json
+          key: igruha-state-${{ github.run_id }}
+
+      - name: Telegram — OK
+        if: success()
+        env:
+          TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          CHAT: ${{ secrets.TELEGRAM_CHAT_ID }}
+          CHANGED: ${{ steps.commit.outputs.changed }}
+          TOTAL: ${{ steps.gen.outputs.total }}
+          SUMMARY: ${{ steps.gen.outputs.summary }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          [ -z "$TOKEN" ] && { echo "no telegram secret, skipping"; exit 0; }
+          if [ "$CHANGED" = "true" ]; then
+            TEXT=$'✅ <b>Torrent Igruha обновлена</b>\n\n'"${SUMMARY}"$'\n<u>Всего</u> в фиде: <b>'"${TOTAL}"$'</b> игр\n\n<a href="'"${RUN_URL}"$'">run</a>'
+          else
+            TEXT=$'✅ <b>Torrent Igruha — без изменений</b>\n\n<u>Всего</u>: <b>'"${TOTAL}"$'</b> игр\n\n<a href="'"${RUN_URL}"$'">run</a>'
+          fi
+          curl -s -X POST "https://api.telegram.org/bot${TOKEN}/sendMessage" \
+            --data-urlencode "chat_id=${CHAT}" \
+            --data-urlencode "parse_mode=HTML" \
+            --data-urlencode "disable_web_page_preview=true" \
+            --data-urlencode "text=${TEXT}"
+
+      - name: Telegram — FAIL
+        if: failure()
+        env:
+          TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          CHAT: ${{ secrets.TELEGRAM_CHAT_ID }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          [ -z "$TOKEN" ] && exit 0
+          TEXT=$'⚠️ <b>Torrent Igruha — прогон УПАЛ</b>\n\n<a href="'"${RUN_URL}"$'">логи</a>'
+          curl -s -X POST "https://api.telegram.org/bot${TOKEN}/sendMessage" \
+            --data-urlencode "chat_id=${CHAT}" \
+            --data-urlencode "parse_mode=HTML" \
+            --data-urlencode "disable_web_page_preview=true" \
+            --data-urlencode "text=${TEXT}"

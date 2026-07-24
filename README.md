@@ -76,15 +76,22 @@ sitemap дал 0 транзиентных фейлов, все скипы — ge
 - страницы «Нет раздачи» тоже кэшируются (как `null`), чтобы не долбить их
   каждый раз.
 
-`.github/workflows/regenerate.yml` гоняет это ежедневно (04:00 UTC). State
-живёт между прогонами через **Actions cache**, поэтому первый (холодный) прогон
-— полный, а последующие трогают лишь несколько сотен страниц. Уведомление о
-дельте — в Telegram (секреты `TELEGRAM_BOT_TOKEN` / `TELEGRAM_CHAT_ID`;
-без них шаг просто пропускается).
+**Запуск только локальный.** `itorrents-igruha.org` отдаёт **403 на IP
+дата-центров** (проверено 2026-07-25: с раннера GitHub Actions — 403, с
+домашнего IP — полные данные). Поэтому облачный крон невозможен; скрейп гоняется
+на резидентном IP через `refresh_local.sh`, который цепляется к общей
+Windows-задаче «Hydra localization refresh» (обёртка `C:\temp\claude\refresh_all.sh`:
+сначала локализации, потом этот источник). Скрипт делает pull → генератор
+(инкремент) → commit/push в `main` → Windows-toast. State (`*.state.json`)
+лежит локально между прогонами.
 
 ```bash
-FULL=1 node generators/itorrents-igruha.mjs   # игнорировать state, полный ребилд
+bash refresh_local.sh                          # то, что гонит Scheduled Task
+FULL=1 node generators/itorrents-igruha.mjs    # игнорировать state, полный ребилд
 ```
+
+(`.github/workflows/notify-test.yml` — dispatch-only, проверка Telegram-секретов;
+скрейп в CI не запускается, он бы упёрся в 403.)
 
 ## Лицензия / оговорка
 

@@ -41,16 +41,16 @@
 ## Запуск
 
 ```bash
-node generators/torrent-igruha.mjs        # полный прогон
-LIMIT=40 node generators/torrent-igruha.mjs   # срез в 40 игр (тест)
-POOL=6  node generators/torrent-igruha.mjs    # число параллельных воркеров
+node generators/itorrents-igruha.mjs        # полный прогон
+LIMIT=40 node generators/itorrents-igruha.mjs   # срез в 40 игр (тест)
+POOL=6  node generators/itorrents-igruha.mjs    # число параллельных воркеров
 ```
 
 ## Источники
 
 | источник | файл | сайт | заметки |
 |---|---|---|---|
-| Torrent Igruha | `torrent-igruha.mjs` | itorrents-igruha.org | windows-1251; magnet собираем из `.torrent`; ~23k игр, 2 запроса на игру |
+| Torrent Igruha | `itorrents-igruha.mjs` | itorrents-igruha.org | windows-1251; magnet собираем из `.torrent`; ~23k игр, 2 запроса на игру |
 
 ### Torrent Igruha — как устроено
 
@@ -68,7 +68,7 @@ sitemap дал 0 транзиентных фейлов, все скипы — ge
 Полный прогон — ~46k запросов (2 на игру, ~1.5 ч на вежливых 8-12 req/s).
 Чтобы не гонять это каждый день, генератор **инкрементальный**:
 
-- держит `data/torrent-igruha.state.json` — карту `url → { lastmod, entry }`
+- держит `data/itorrents-igruha.state.json` — карту `url → { lastmod, entry }`
   (gitignored);
 - на каждом прогоне переиспользует записи, у которых `<lastmod>` в sitemap не
   изменился, и **фетчит только новые/изменённые** страницы; снятые с сайта
@@ -83,7 +83,7 @@ sitemap дал 0 транзиентных фейлов, все скипы — ge
 без них шаг просто пропускается).
 
 ```bash
-FULL=1 node generators/torrent-igruha.mjs   # игнорировать state, полный ребилд
+FULL=1 node generators/itorrents-igruha.mjs   # игнорировать state, полный ребилд
 ```
 
 ## Лицензия / оговорка

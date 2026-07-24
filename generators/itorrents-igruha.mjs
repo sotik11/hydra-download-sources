@@ -1,7 +1,7 @@
 /**
  * Torrent Игруха (itorrents-igruha.org) -> Hydra download source.
  *
- * Output: data/torrent-igruha.json in Hydra's download-source shape
+ * Output: data/itorrents-igruha.json in Hydra's download-source shape
  *   { name, downloads: [{ title, uris, uploadDate, fileSize }] }
  *
  * Per game (2 requests):
@@ -27,8 +27,8 @@ import { torrentToMagnet } from "../lib/torrent.mjs";
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const SITE = "https://itorrents-igruha.org";
 const NAME = "Torrent Igruha";
-const OUT = process.env.OUT || join(ROOT, "data", "torrent-igruha.json");
-const STATE = process.env.STATE || join(ROOT, "data", "torrent-igruha.state.json");
+const OUT = process.env.OUT || join(ROOT, "data", "itorrents-igruha.json");
+const STATE = process.env.STATE || join(ROOT, "data", "itorrents-igruha.state.json");
 
 const LIMIT = Number(process.env.LIMIT) || 0;
 const SAMPLE = Number(process.env.SAMPLE) || 0; // spread-sample N across the sitemap

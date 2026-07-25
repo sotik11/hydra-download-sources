@@ -23,6 +23,7 @@ import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 import { getBuffer, getText, mapPool, sleep } from "../lib/net.mjs";
 import { torrentToMagnet } from "../lib/torrent.mjs";
+import { parseVariants, toDownloads } from "../lib/variants.mjs";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const SITE = "https://itorrents-igruha.org";
@@ -82,37 +83,29 @@ async function listGamePages() {
   return out;
 }
 
-// Skip reasons. "no-torrent"/"no-title" are genuine (the page loaded but has no
-// distribution); the rest are transient network failures worth a retry.
-const TRANSIENT = new Set(["fetch-page", "fetch-torrent", "parse-torrent"]);
+// Retried within a run and re-fetched next run. Genuine outcomes
+// (no-torrent / no-title / page-gone) are cached instead.
+const TRANSIENT = new Set(["fetch-page", "fetch-torrent"]);
 
-/** @returns {{download}|{skip:string}} */
+/** @returns {{downloads: object[]}|{skip: string}} */
 async function buildDownload(pageUrl) {
   let bytes;
   try {
     await throttle();
-    bytes = await getBuffer(pageUrl, { ms: 15000 });
-  } catch {
-    return { skip: "fetch-page" };
+    bytes = await getBuffer(pageUrl, { ms: 15000, tries: 2 });
+  } catch (e) {
+    // 4xx = the page is gone (stale sitemap entry) -> genuine skip, cache it;
+    // anything else is a transient network error worth a retry.
+    return { skip: /->\s*4\d\d/.test(e.message) ? "page-gone" : "fetch-page" };
   }
 
   const html = cp1251.decode(bytes);
-  // A page can list several download variants; the first is occasionally a
-  // dead/removed torrent while a later one works, so collect all ids and take
-  // the first that yields a valid magnet.
-  const ids = [
-    ...new Set(
-      [...html.matchAll(/[?&]do=download&(?:amp;)?id=(\d+)/g)].map((m) => m[1])
-    ),
-  ];
-  if (!ids.length) return { skip: "no-torrent" }; // "Нет раздачи"
+  const variants = parseVariants(html);
+  if (!variants.length) return { skip: "no-torrent" }; // "Нет раздачи"
 
   const h1 = html.match(/<h1[^>]*>([\s\S]*?)<\/h1>/);
-  const title = h1 ? clean(h1[1]) : null;
-  if (!title) return { skip: "no-title" };
-
-  const sizeMatch = html.match(/Размер\s*:?\s*([\d.,]+\s*(?:[GMKT]B|[ГМКТ]б))/i);
-  const fileSize = sizeMatch ? sizeMatch[1].replace(/\s+/g, " ").trim() : "";
+  const baseTitle = h1 ? clean(h1[1]) : null;
+  if (!baseTitle) return { skip: "no-title" };
 
   const timeMatch = html.match(/<time[^>]*datetime="([^"]+)"/i);
   let uploadDate = new Date(0).toISOString();
@@ -121,13 +114,13 @@ async function buildDownload(pageUrl) {
     if (!Number.isNaN(d.getTime())) uploadDate = d.toISOString();
   }
 
-  let magnet = null;
+  const working = [];
   let networkError = false;
-  for (const id of ids) {
+  for (const v of variants) {
     let torrent;
     try {
       await throttle();
-      torrent = await getBuffer(`${SITE}/engine/download.php?id=${id}`, {
+      torrent = await getBuffer(`${SITE}/engine/download.php?id=${v.id}`, {
         ms: 20000,
         tries: 1,
       });
@@ -137,19 +130,19 @@ async function buildDownload(pageUrl) {
       if (!/->\s*\d/.test(e.message)) networkError = true;
       continue;
     }
+    let magnet;
     try {
-      const m = torrentToMagnet(torrent).magnet;
-      if (/^magnet:\?xt=urn:btih:[0-9a-f]{40}/.test(m)) {
-        magnet = m;
-        break;
-      }
+      magnet = torrentToMagnet(torrent).magnet;
     } catch {
-      // response was not a valid torrent — dead/blocked variant, try the next.
+      continue; // not a valid torrent — dead/blocked variant
+    }
+    if (/^magnet:\?xt=urn:btih:[0-9a-f]{40}/.test(magnet)) {
+      working.push({ ...v, magnet });
     }
   }
 
-  if (magnet) return { download: { title, uris: [magnet], uploadDate, fileSize } };
-  return { skip: networkError ? "fetch-torrent" : "no-torrent" };
+  if (!working.length) return { skip: networkError ? "fetch-torrent" : "no-torrent" };
+  return { downloads: toDownloads(baseTitle, uploadDate, working) };
 }
 
 /** Evenly spread N items across the whole list (fair diagnostic sample). */
@@ -173,7 +166,16 @@ async function runPass(items, label) {
 async function readState() {
   if (FULL) return {};
   try {
-    return JSON.parse(await readFile(STATE, "utf8"));
+    const raw = JSON.parse(await readFile(STATE, "utf8"));
+    // Migrate the old single-download schema { lastmod, download } to the
+    // multi-variant one { lastmod, downloads: [] }.
+    for (const e of Object.values(raw)) {
+      if (e.downloads === undefined) {
+        e.downloads = e.download ? [e.download] : [];
+        delete e.download;
+      }
+    }
+    return raw;
   } catch {
     return {}; // no state yet -> first run rebuilds everything
   }
@@ -228,14 +230,14 @@ async function main() {
 
   const reasons = {};
   for (const r of fetched) {
-    // Persist successes and GENUINE absences (no-torrent/no-title) so we don't
-    // re-fetch them until their sitemap lastmod changes. Transient network
-    // failures are NOT persisted -> they fall into toFetch again next run
-    // instead of getting stuck as a permanent null.
-    if (r.download) {
-      nextState[r.url] = { lastmod: r.lastmod, download: r.download };
+    // Persist successes and GENUINE absences (no-torrent / no-title / page-gone)
+    // so we don't re-fetch them until their sitemap lastmod changes. Transient
+    // failures are NOT persisted -> they land in toFetch again next run instead
+    // of getting stuck.
+    if (r.downloads) {
+      nextState[r.url] = { lastmod: r.lastmod, downloads: r.downloads };
     } else if (!TRANSIENT.has(r.skip)) {
-      nextState[r.url] = { lastmod: r.lastmod, download: null };
+      nextState[r.url] = { lastmod: r.lastmod, downloads: [] };
     }
     if (r.skip) reasons[r.skip] = (reasons[r.skip] || 0) + 1;
   }
@@ -243,8 +245,7 @@ async function main() {
   // Stable order (by url) so the committed feed has minimal git churn.
   const downloads = Object.keys(nextState)
     .sort()
-    .map((u) => nextState[u].download)
-    .filter(Boolean);
+    .flatMap((u) => nextState[u].downloads || []);
 
   await writeFile(OUT, `${JSON.stringify({ name: NAME, downloads }, null, 2)}\n`, "utf8");
   if (!SAMPLE) {

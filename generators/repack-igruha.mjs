@@ -194,7 +194,15 @@ async function main() {
 
   const reasons = {};
   for (const r of fetched) {
-    nextState[r.url] = { lastmod: r.lastmod, download: r.download ?? null };
+    // Persist successes and GENUINE absences (no-torrent/no-title) so we don't
+    // re-fetch them until their sitemap lastmod changes. Transient network
+    // failures are NOT persisted -> they fall into toFetch again next run
+    // instead of getting stuck as a permanent null.
+    if (r.download) {
+      nextState[r.url] = { lastmod: r.lastmod, download: r.download };
+    } else if (!TRANSIENT.has(r.skip)) {
+      nextState[r.url] = { lastmod: r.lastmod, download: null };
+    }
     if (r.skip) reasons[r.skip] = (reasons[r.skip] || 0) + 1;
   }
 

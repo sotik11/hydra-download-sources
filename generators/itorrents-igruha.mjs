@@ -97,9 +97,15 @@ async function buildDownload(pageUrl) {
   }
 
   const html = cp1251.decode(bytes);
-  const idMatch = html.match(/[?&]do=download&(?:amp;)?id=(\d+)/);
-  if (!idMatch) return { skip: "no-torrent" }; // "Нет раздачи"
-  const downloadId = idMatch[1];
+  // A page can list several download variants; the first is occasionally a
+  // dead/removed torrent while a later one works, so collect all ids and take
+  // the first that yields a valid magnet.
+  const ids = [
+    ...new Set(
+      [...html.matchAll(/[?&]do=download&(?:amp;)?id=(\d+)/g)].map((m) => m[1])
+    ),
+  ];
+  if (!ids.length) return { skip: "no-torrent" }; // "Нет раздачи"
 
   const h1 = html.match(/<h1[^>]*>([\s\S]*?)<\/h1>/);
   const title = h1 ? clean(h1[1]) : null;
@@ -115,21 +121,35 @@ async function buildDownload(pageUrl) {
     if (!Number.isNaN(d.getTime())) uploadDate = d.toISOString();
   }
 
-  let magnet;
-  try {
-    await throttle();
-    const torrent = await getBuffer(
-      `${SITE}/engine/download.php?id=${downloadId}`,
-      { ms: 20000 }
-    );
-    magnet = torrentToMagnet(torrent).magnet;
-  } catch {
-    return { skip: "fetch-torrent" };
+  let magnet = null;
+  let networkError = false;
+  for (const id of ids) {
+    let torrent;
+    try {
+      await throttle();
+      torrent = await getBuffer(`${SITE}/engine/download.php?id=${id}`, {
+        ms: 20000,
+        tries: 1,
+      });
+    } catch (e) {
+      // "GET … -> 403/404" = this variant is gone, try the next; anything else
+      // (timeout / reset) is a transient network error.
+      if (!/->\s*\d/.test(e.message)) networkError = true;
+      continue;
+    }
+    try {
+      const m = torrentToMagnet(torrent).magnet;
+      if (/^magnet:\?xt=urn:btih:[0-9a-f]{40}/.test(m)) {
+        magnet = m;
+        break;
+      }
+    } catch {
+      // response was not a valid torrent — dead/blocked variant, try the next.
+    }
   }
-  if (!/^magnet:\?xt=urn:btih:[0-9a-f]{40}/.test(magnet))
-    return { skip: "parse-torrent" };
 
-  return { download: { title, uris: [magnet], uploadDate, fileSize } };
+  if (magnet) return { download: { title, uris: [magnet], uploadDate, fileSize } };
+  return { skip: networkError ? "fetch-torrent" : "no-torrent" };
 }
 
 /** Evenly spread N items across the whole list (fair diagnostic sample). */

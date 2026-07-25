@@ -88,9 +88,15 @@ async function buildDownload(pageUrl) {
     return { skip: "fetch-page" };
   }
 
-  const idMatch = html.match(/[?&]do=download&(?:amp;)?id=(\d+)/);
-  if (!idMatch) return { skip: "no-torrent" };
-  const downloadId = idMatch[1];
+  // A page can list several download variants (main repack / portable / P2P).
+  // The first is sometimes a dead/removed torrent while a later one works, so
+  // collect all ids and take the first that yields a valid magnet.
+  const ids = [
+    ...new Set(
+      [...html.matchAll(/[?&]do=download&(?:amp;)?id=(\d+)/g)].map((m) => m[1])
+    ),
+  ];
+  if (!ids.length) return { skip: "no-torrent" };
 
   const h1 = html.match(/<h1[^>]*>([\s\S]*?)<\/h1>/);
   const title = h1 ? clean(h1[1]) : null;
@@ -106,21 +112,39 @@ async function buildDownload(pageUrl) {
     if (!Number.isNaN(d.getTime())) uploadDate = d.toISOString();
   }
 
-  let magnet;
-  try {
-    await throttle();
-    const torrent = await getBuffer(
-      `${SITE}/index.php?do=download&id=${downloadId}`,
-      { headers: { Referer: pageUrl }, ms: 20000 }
-    );
-    magnet = torrentToMagnet(torrent).magnet;
-  } catch {
-    return { skip: "fetch-torrent" };
+  // encodeURI: the Referer header must be Latin-1, but game URLs can contain
+  // Cyrillic / Unicode (e.g. "…-спарта-2035…", "…-hexbreaker-ⅱ…").
+  const referer = encodeURI(pageUrl);
+  let magnet = null;
+  let networkError = false;
+  for (const id of ids) {
+    let torrent;
+    try {
+      await throttle();
+      torrent = await getBuffer(`${SITE}/index.php?do=download&id=${id}`, {
+        headers: { Referer: referer },
+        ms: 20000,
+        tries: 1,
+      });
+    } catch (e) {
+      // "GET … -> 403/404" = this variant's torrent is gone, try the next;
+      // anything else (timeout / reset) is a transient network error.
+      if (!/->\s*\d/.test(e.message)) networkError = true;
+      continue;
+    }
+    try {
+      const m = torrentToMagnet(torrent).magnet;
+      if (/^magnet:\?xt=urn:btih:[0-9a-f]{40}/.test(m)) {
+        magnet = m;
+        break;
+      }
+    } catch {
+      // response was not a valid torrent — dead/blocked variant, try the next.
+    }
   }
-  if (!/^magnet:\?xt=urn:btih:[0-9a-f]{40}/.test(magnet))
-    return { skip: "parse-torrent" };
 
-  return { download: { title, uris: [magnet], uploadDate, fileSize } };
+  if (magnet) return { download: { title, uris: [magnet], uploadDate, fileSize } };
+  return { skip: networkError ? "fetch-torrent" : "no-torrent" };
 }
 
 function spreadSample(items, n) {

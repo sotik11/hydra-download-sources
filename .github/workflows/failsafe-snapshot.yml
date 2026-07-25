@@ -1,0 +1,86 @@
+name: failsafe-snapshot
+
+# Bi-weekly snapshot of the live `main` feeds into the `snapshot` branch, so a
+# break-glass backup URL always holds a known-good copy. Promotes main ->
+# snapshot ONLY if sanity-check passes (candidate = main, baseline = snapshot).
+#
+# This job does NOT scrape any site — it only compares committed JSON — so the
+# datacenter-IP 403 that blocks the scrape does not affect it. `main` stays the
+# live feed users read; `snapshot` is the manual fallback.
+
+on:
+  schedule:
+    - cron: "0 5 1,15 * *" # 1st and 15th, 05:00 UTC (~bi-weekly)
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Run sanity-check but skip the push"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: failsafe-snapshot
+  cancel-in-progress: false
+
+jobs:
+  snapshot:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Materialize snapshot feeds for comparison
+        run: |
+          mkdir -p /tmp/snapshot-data
+          git fetch origin snapshot 2>/dev/null || echo "no snapshot branch yet (first run)"
+          if git rev-parse --verify origin/snapshot >/dev/null 2>&1; then
+            git ls-tree -r --name-only origin/snapshot -- data/ | grep '\.json$' | while read -r f; do
+              git show "origin/snapshot:$f" > "/tmp/snapshot-data/$(basename "$f")"
+            done
+          fi
+          echo "baseline files:"; ls -1 /tmp/snapshot-data || true
+
+      - name: Sanity-check main vs snapshot
+        id: sanity
+        run: node .github/scripts/sanity-check.mjs ./data /tmp/snapshot-data
+
+      - name: Promote main -> snapshot
+        id: promote
+        if: ${{ success() && github.event.inputs.dry_run != 'true' }}
+        run: |
+          before=$(git rev-parse origin/snapshot 2>/dev/null || echo none)
+          git push origin HEAD:snapshot
+          echo "before=$before" >> "$GITHUB_OUTPUT"
+          echo "pushed=true" >> "$GITHUB_OUTPUT"
+
+      - name: Telegram — result
+        if: always()
+        env:
+          TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          CHAT: ${{ secrets.TELEGRAM_CHAT_ID }}
+          SANITY: ${{ steps.sanity.outcome }}
+          FAILURES: ${{ steps.sanity.outputs.failures }}
+          PUSHED: ${{ steps.promote.outputs.pushed }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          [ -z "$TOKEN" ] && exit 0
+          if [ "$SANITY" = "success" ] && [ "$PUSHED" = "true" ]; then
+            TEXT=$'✅ <b>Failsafe snapshot: main → snapshot</b>\n\nSanity OK, бэкап обновлён.\n\n<a href="'"${RUN_URL}"$'">run</a>'
+          elif [ "$SANITY" = "success" ]; then
+            TEXT=$'ℹ️ <b>Failsafe snapshot — dry-run</b>\n\nSanity OK, push пропущен.\n\n<a href="'"${RUN_URL}"$'">run</a>'
+          else
+            TEXT=$'⚠️ <b>Failsafe snapshot ПРОПУЩЕН</b>\n\nSanity-check не прошёл:\n'"${FAILURES}"$'\n\n<a href="'"${RUN_URL}"$'">run</a>'
+          fi
+          curl -s -X POST "https://api.telegram.org/bot${TOKEN}/sendMessage" \
+            --data-urlencode "chat_id=${CHAT}" \
+            --data-urlencode "parse_mode=HTML" \
+            --data-urlencode "disable_web_page_preview=true" \
+            --data-urlencode "text=${TEXT}"

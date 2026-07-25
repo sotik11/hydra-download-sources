@@ -1,9 +1,5 @@
 /**
- * Repack Игруха (repack-igruha.net) -> Hydra download source.  [TEST BUILD]
- *
- * Test naming on purpose (repack-igruha-test.json / "Repack Igruha Test") so the
- * throwaway test URL and its stale content never collide with the final feed in
- * Hydra's URL-keyed backend cache. Renamed to repack-igruha on finalization.
+ * Repack Игруха (repack-igruha.net) -> Hydra download source.
  *
  * Sibling of itorrents-igruha.mjs, same operator (byigruha). Differences:
  *   - UTF-8 pages (plain getText), not windows-1251.
@@ -25,10 +21,9 @@ import { torrentToMagnet } from "../lib/torrent.mjs";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const SITE = "https://repack-igruha.net";
-const NAME = "Repack Igruha Test";
-const OUT = process.env.OUT || join(ROOT, "data", "repack-igruha-test.json");
-const STATE =
-  process.env.STATE || join(ROOT, "data", "repack-igruha-test.state.json");
+const NAME = "Repack Igruha";
+const OUT = process.env.OUT || join(ROOT, "data", "repack-igruha.json");
+const STATE = process.env.STATE || join(ROOT, "data", "repack-igruha.state.json");
 
 const LIMIT = Number(process.env.LIMIT) || 0;
 const SAMPLE = Number(process.env.SAMPLE) || 0;

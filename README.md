@@ -50,7 +50,11 @@ POOL=6  node generators/itorrents-igruha.mjs    # число параллель�
 
 | источник | файл | сайт | заметки |
 |---|---|---|---|
-| Torrent Igruha | `itorrents-igruha.mjs` | itorrents-igruha.org | windows-1251; magnet собираем из `.torrent`; ~23k игр, 2 запроса на игру |
+| Torrent Igruha | `itorrents-igruha.mjs` | itorrents-igruha.org | windows-1251; magnet из `.torrent`; ~23k игр |
+| Repack Igruha | `repack-igruha.mjs` | repack-igruha.net | UTF-8; sitemap-индекс → `news_pages.xml`; торрент `index.php?do=download` **с `Referer`**; ~13k игр |
+
+Оба сайта — один оператор (byigruha), оба **403 на IP дата-центров** → скрейп
+только локально (см. ниже).
 
 ### Torrent Igruha — как устроено
 
@@ -68,30 +72,35 @@ sitemap дал 0 транзиентных фейлов, все скипы — ge
 Полный прогон — ~46k запросов (2 на игру, ~1.5 ч на вежливых 8-12 req/s).
 Чтобы не гонять это каждый день, генератор **инкрементальный**:
 
-- держит `data/itorrents-igruha.state.json` — карту `url → { lastmod, entry }`
-  (gitignored);
+- держит `data/<src>.state.json` — карту `url → { lastmod, entry }` (gitignored);
 - на каждом прогоне переиспользует записи, у которых `<lastmod>` в sitemap не
   изменился, и **фетчит только новые/изменённые** страницы; снятые с сайта
   игры выпадают сами;
 - страницы «Нет раздачи» тоже кэшируются (как `null`), чтобы не долбить их
   каждый раз.
 
-**Запуск только локальный.** `itorrents-igruha.org` отдаёт **403 на IP
-дата-центров** (проверено 2026-07-25: с раннера GitHub Actions — 403, с
-домашнего IP — полные данные). Поэтому облачный крон невозможен; скрейп гоняется
-на резидентном IP через `refresh_local.sh`, который цепляется к общей
-Windows-задаче «Hydra localization refresh» (обёртка `C:\temp\claude\refresh_all.sh`:
-сначала локализации, потом этот источник). Скрипт делает pull → генератор
-(инкремент) → commit/push в `main` → Windows-toast. State (`*.state.json`)
-лежит локально между прогонами.
+**Запуск только локальный.** Оба сайта отдают **403 на IP дата-центров**
+(проверено 2026-07-25: с раннера GitHub Actions — 403, с домашнего IP — полные
+данные). Поэтому облачный крон для скрейпа невозможен; `refresh_local.sh` гоняет
+**оба источника** на резидентном IP и цепляется к общей Windows-задаче «Hydra
+localization refresh» (обёртка `C:\temp\claude\refresh_all.sh`: сначала
+локализации, потом эти источники). Скрипт: pull → каждый генератор (инкремент,
+с guard «<50% → откат») → один commit/push в `main` → Windows-toast.
 
 ```bash
-bash refresh_local.sh                          # то, что гонит Scheduled Task
-FULL=1 node generators/itorrents-igruha.mjs    # игнорировать state, полный ребилд
+bash refresh_local.sh                          # то, что гонит Scheduled Task (оба)
+FULL=1 node generators/repack-igruha.mjs       # игнорировать state, полный ребилд
 ```
 
+**Failsafe (`main` = live, `snapshot` = бэкап).** `main` — то, что читают
+клиенты. `.github/workflows/failsafe-snapshot.yml` раз в 2 недели копирует
+`main → snapshot`, **только если прошёл** `sanity-check.mjs` (валидный JSON,
+`downloads` непустой, ≥95% `uris` — magnet, count ≥90% и размер ≥50% от snapshot).
+Этот джоб **не скрейпит сайты** (только сравнивает закоммиченный JSON), поэтому
+403 в CI ему не мешает. Break-glass бэкап-URL: `.../snapshot/data/<src>.json`.
+
 (`.github/workflows/notify-test.yml` — dispatch-only, проверка Telegram-секретов;
-скрейп в CI не запускается, он бы упёрся в 403.)
+скрейп в CI не запускается — 403.)
 
 ## Лицензия / оговорка
 

@@ -68,8 +68,19 @@ jobs:
             echo "No data changes."
           else
             git commit -m "data: refresh rutor games feed [skip ci]"
-            git push origin HEAD:main
-            echo "pushed"
+            # main is also written by the local igruha refresh (refresh_local.sh),
+            # so guard the push against a non-fast-forward race. Different files
+            # (rutor.json vs *-igruha.json) => the rebase is always clean.
+            for attempt in 1 2 3 4 5; do
+              if git push origin HEAD:main; then
+                echo "pushed (attempt $attempt)"; break
+              fi
+              if [ "$attempt" = "5" ]; then
+                echo "::error::push failed after 5 attempts"; exit 1
+              fi
+              echo "push rejected — rebasing on origin/main (attempt $attempt)"
+              git pull --rebase origin main
+            done
           fi
 
       - name: Telegram — notify

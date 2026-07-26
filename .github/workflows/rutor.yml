@@ -1,0 +1,94 @@
+name: rutor
+
+# Scrapes the rutor.info "Игры" listing (category 8) into data/rutor.json and
+# commits it to `main` (the live feed users read).
+#
+# Unlike the Igruha sources — whose sites 403 GitHub's datacenter IPs, forcing a
+# local residential run — rutor serves datacenter IPs fine, so this runs fully
+# in the cloud on a schedule. No local machine, no Scheduled Task chain.
+#
+# A full walk is only ~286 sequential listing requests (~2 min); the state file
+# is gitignored, so every CI run rebuilds the whole category from page 0 and
+# self-terminates when it reaches the empty page past the last one.
+
+on:
+  schedule:
+    - cron: "0 4 * * *" # daily, 04:00 UTC
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Scrape and report the count, but skip the commit (reachability test)"
+        type: boolean
+        default: true
+
+permissions:
+  contents: write
+
+concurrency:
+  group: rutor
+  cancel-in-progress: false
+
+jobs:
+  rutor:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Scrape rutor (full walk)
+        run: node generators/rutor.mjs
+
+      # A blocked/truncated run must never clobber the committed feed. A clean
+      # full walk yields ~24.7k PC games; refuse to commit anything far below.
+      - name: Guard — feed must be non-trivial
+        id: guard
+        run: |
+          COUNT=$(node -e "console.log(JSON.parse(require('fs').readFileSync('data/rutor.json','utf8')).downloads.length)")
+          echo "count=$COUNT" >> "$GITHUB_OUTPUT"
+          echo "rutor.json -> $COUNT downloads"
+          if [ "$COUNT" -lt 20000 ]; then
+            echo "::error::rutor feed only $COUNT (<20000) — refusing to commit a possibly truncated feed"
+            exit 1
+          fi
+
+      - name: Commit refreshed data
+        id: commit
+        if: ${{ github.event_name == 'schedule' || github.event.inputs.dry_run != 'true' }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- data/rutor.json
+          if git diff --staged --quiet; then
+            echo "No data changes."
+          else
+            git commit -m "data: refresh rutor games feed [skip ci]"
+            git push origin HEAD:main
+            echo "pushed"
+          fi
+
+      - name: Telegram — notify
+        if: always()
+        env:
+          TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          CHAT: ${{ secrets.TELEGRAM_CHAT_ID }}
+          JOB: ${{ job.status }}
+          COUNT: ${{ steps.guard.outputs.count }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          [ -z "$TOKEN" ] && exit 0
+          if [ "$JOB" = "success" ]; then
+            TEXT=$'✅ <b>rutor</b> — фид обновлён\n\n<b>'"${COUNT}"$'</b> PC-игр.\n\n<a href="'"${RUN_URL}"$'">run</a>'
+          else
+            TEXT=$'⚠️ <b>rutor</b> — прогон упал\n\nСайт недоступен из CI или фид усечён.\n\n<a href="'"${RUN_URL}"$'">run</a>'
+          fi
+          curl -s -X POST "https://api.telegram.org/bot${TOKEN}/sendMessage" \
+            --data-urlencode "chat_id=${CHAT}" \
+            --data-urlencode "parse_mode=HTML" \
+            --data-urlencode "disable_web_page_preview=true" \
+            --data-urlencode "text=${TEXT}"

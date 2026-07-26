@@ -1,5 +1,5 @@
 /**
- * Rutor — Игры (rutor.info, category 8) -> Hydra download source.  [TEST BUILD]
+ * Rutor — Игры (rutor.info, category 8) -> Hydra download source.
  *
  * Unlike the Igruha sources, everything we need is already in the listing rows,
  * so there is normally NO per-torrent fetch:
@@ -41,9 +41,9 @@ import { torrentToMagnet } from "../lib/torrent.mjs";
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const SITE = "https://rutor.info";
 const CAT = 8; // "Игры"
-const NAME = "Rutor Test";
-const OUT = process.env.OUT || join(ROOT, "data", "rutor-test.json");
-const STATE = process.env.STATE || join(ROOT, "data", "rutor-test.state.json");
+const NAME = "Rutor";
+const OUT = process.env.OUT || join(ROOT, "data", "rutor.json");
+const STATE = process.env.STATE || join(ROOT, "data", "rutor.state.json");
 
 const PAGES = Number(process.env.PAGES) || 0; // slice: first N pages
 const FULL = process.env.FULL === "1";

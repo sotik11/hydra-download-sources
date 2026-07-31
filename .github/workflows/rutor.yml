@@ -41,6 +41,15 @@ jobs:
         with:
           node-version: 22
 
+      # Count the currently-committed feed BEFORE the scrape overwrites it, so
+      # the notification can report how many games were added this run.
+      - name: Previous feed count
+        id: prev
+        run: |
+          BEFORE=$(node -e "try{console.log(JSON.parse(require('fs').readFileSync('data/rutor.json','utf8')).downloads.length)}catch{console.log(0)}")
+          echo "before=$BEFORE" >> "$GITHUB_OUTPUT"
+          echo "previous: $BEFORE"
+
       - name: Scrape rutor (full walk)
         run: node generators/rutor.mjs
 
@@ -90,11 +99,13 @@ jobs:
           CHAT: ${{ secrets.TELEGRAM_CHAT_ID }}
           JOB: ${{ job.status }}
           COUNT: ${{ steps.guard.outputs.count }}
+          BEFORE: ${{ steps.prev.outputs.before }}
           RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
         run: |
           [ -z "$TOKEN" ] && exit 0
           if [ "$JOB" = "success" ]; then
-            TEXT=$'✅ <b>rutor</b> — фид обновлён\n\n<b>'"${COUNT}"$'</b> PC-игр.\n\n<a href="'"${RUN_URL}"$'">run</a>'
+            D=$(( COUNT - BEFORE )); SIGN=$([ "$D" -ge 0 ] && echo "+")
+            TEXT=$'✅ <b>rutor</b> — фид обновлён\n\n<b>'"${COUNT}"$'</b> PC-игр (<b>'"${SIGN}${D}"$'</b>)\n\n<a href="'"${RUN_URL}"$'">run</a>'
           else
             TEXT=$'⚠️ <b>rutor</b> — прогон упал\n\nСайт недоступен из CI или фид усечён.\n\n<a href="'"${RUN_URL}"$'">run</a>'
           fi

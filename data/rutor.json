@@ -986,14 +986,6 @@
       "fileSize": "2.24 GB"
     },
     {
-      "title": "Советские игровые автоматы: Морской бой; Городки; Сафари; Перехватчик; Снайпер-2; Магистраль; Скачки (2009) PC",
-      "uris": [
-        "magnet:?xt=urn:btih:2e49dd05b15fb3efdddc939e06dd63549d46c914&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
-      ],
-      "uploadDate": "2011-02-05T00:00:00.000Z",
-      "fileSize": "109.51 MB"
-    },
-    {
       "title": "Grand Ages: Rome (2009) PC",
       "uris": [
         "magnet:?xt=urn:btih:c2bc425bc5181751e5a2b25db43a1fce7c2bb18c&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
@@ -1754,6 +1746,14 @@
       "fileSize": "1.14 GB"
     },
     {
+      "title": "Bionic Commando (2009) PC | Repack от R.G.com.bat",
+      "uris": [
+        "magnet:?xt=urn:btih:b69c1da7654aa28deee86dc87260fbf2de2ed2ff&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
+      ],
+      "uploadDate": "2009-07-21T00:00:00.000Z",
+      "fileSize": "3.49 GB"
+    },
+    {
       "title": "The Settlers 2: 10th Anniversary (Юбилейное издание) (2006) PC",
       "uris": [
         "magnet:?xt=urn:btih:0d40fd84d5bbcb221b248135e540015f416e7545&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
@@ -1786,76 +1786,12 @@
       "fileSize": "1.30 GB"
     },
     {
-      "title": "GTA / Grand Theft Auto: San Andreas (2005) PC | Лицензия",
-      "uris": [
-        "magnet:?xt=urn:btih:906c2a286e90dc0f94230230d177ecb5357f56ff&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
-      ],
-      "uploadDate": "2009-07-27T00:00:00.000Z",
-      "fileSize": "3.98 GB"
-    },
-    {
-      "title": "Герои меча и магии - Новогоднее издание (2009) PC",
-      "uris": [
-        "magnet:?xt=urn:btih:8ece568987e426e3256b7a35229feb2e2977c81b&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
-      ],
-      "uploadDate": "2009-07-27T00:00:00.000Z",
-      "fileSize": "1.40 GB"
-    },
-    {
-      "title": "Unreal - Антология / Unreal - Anthology (2xDVD5) (2009) PC | Repack+Rip",
-      "uris": [
-        "magnet:?xt=urn:btih:dbd0fa33c6954c54807f0a46c02f4007c3efd2b8&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
-      ],
-      "uploadDate": "2009-07-29T00:00:00.000Z",
-      "fileSize": "8.41 GB"
-    },
-    {
-      "title": "East India Company (2009) PC | RePack",
-      "uris": [
-        "magnet:?xt=urn:btih:b4003fba8e9ee05cf969ec39beb7a7de3ae1893b&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
-      ],
-      "uploadDate": "2009-08-01T00:00:00.000Z",
-      "fileSize": "629.50 MB"
-    },
-    {
-      "title": "Sid Meier's Civilization III: Path of Atlantes 2 (2005) PC",
-      "uris": [
-        "magnet:?xt=urn:btih:f27d8a69d9d44b03819d78d732e82712fec99040&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
-      ],
-      "uploadDate": "2009-08-03T00:00:00.000Z",
-      "fileSize": "995.30 MB"
-    },
-    {
-      "title": "Alien Shooter 2 - Reloaded (2006) PC",
-      "uris": [
-        "magnet:?xt=urn:btih:a13b7fbd42c32e44a4caad0853a3dfdaed0ea26d&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
-      ],
-      "uploadDate": "2009-08-03T00:00:00.000Z",
-      "fileSize": "235.10 MB"
-    },
-    {
-      "title": "Рыбка Фредди: Дело о похищенной раковине (2004) PC",
-      "uris": [
-        "magnet:?xt=urn:btih:5a4e033016916ce47693258396c0f3ed2b5e6fdf&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
-      ],
-      "uploadDate": "2009-08-04T00:00:00.000Z",
-      "fileSize": "307.05 MB"
-    },
-    {
       "title": "Рыбка Фредди: Дело о морской капусте / Freddi Fish: The Case of the Missing Kelp Seeds (1994) PC",
       "uris": [
         "magnet:?xt=urn:btih:a05e5b6bb021ece419f6ec6d5e4731c60872850d&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
       ],
       "uploadDate": "2017-10-06T00:00:00.000Z",
       "fileSize": "139.40 MB"
-    },
-    {
-      "title": "Рыбка Фредди: Дело о чудовище из коралловой бухты (2004) PC",
-      "uris": [
-        "magnet:?xt=urn:btih:d4d9f03254c0aa08c1a76990144a8cc1b5b00ea5&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
-      ],
-      "uploadDate": "2009-08-04T00:00:00.000Z",
-      "fileSize": "353.40 MB"
     },
     {
       "title": "Флиппер и Лопака: Тайна океана / Flipper & Lopaka Secrets of the Deep (2004) PC",
@@ -3898,6 +3834,22 @@
       "fileSize": "519.12 MB"
     },
     {
+      "title": "Сборник WWE RAW (7 in 1) + MTV Celebrity Deathmatсh (2009) PC",
+      "uris": [
+        "magnet:?xt=urn:btih:e806ae01bcc1bcc555b65e214dddb589e80a8210&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
+      ],
+      "uploadDate": "2010-01-07T00:00:00.000Z",
+      "fileSize": "4.10 GB"
+    },
+    {
+      "title": "Восточный фронт: Неизвестная война (2006) PC",
+      "uris": [
+        "magnet:?xt=urn:btih:008abcd22f747bf0c7f186d6483983785ff54cd6&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
+      ],
+      "uploadDate": "2010-01-07T00:00:00.000Z",
+      "fileSize": "2.89 GB"
+    },
+    {
       "title": "Return to Castle Wolfenstein - Антология (2001-2006) PC",
       "uris": [
         "magnet:?xt=urn:btih:36e9266c2804ca3b3d5bf833fc29e2d2129d3114&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
@@ -4984,86 +4936,6 @@
       ],
       "uploadDate": "2010-02-27T00:00:00.000Z",
       "fileSize": "70.30 MB"
-    },
-    {
-      "title": "Корсары 3: Тайны Дальних Морей (2009) PC",
-      "uris": [
-        "magnet:?xt=urn:btih:32f57409fec47f87206ba71dc298cfed831e6f38&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
-      ],
-      "uploadDate": "2010-02-27T00:00:00.000Z",
-      "fileSize": "1.58 GB"
-    },
-    {
-      "title": "Sam and Max: Season Two (2008) PC",
-      "uris": [
-        "magnet:?xt=urn:btih:0c07281956b8be9f7397543ed34c7de0714397cb&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
-      ],
-      "uploadDate": "2010-02-27T00:00:00.000Z",
-      "fileSize": "646.07 MB"
-    },
-    {
-      "title": "Инквизитор / Wolfgang Hohlbein's The Inquisitor (2010) PC",
-      "uris": [
-        "magnet:?xt=urn:btih:3f6dc619e7042561b30e04d652c6dcd51a38eaa2&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
-      ],
-      "uploadDate": "2010-02-27T00:00:00.000Z",
-      "fileSize": "192.04 MB"
-    },
-    {
-      "title": "Battlefield: Bad Company 2 (2010) PC | RePack",
-      "uris": [
-        "magnet:?xt=urn:btih:d4c80a92720e02ca0d1d67c224319fd15367fc69&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
-      ],
-      "uploadDate": "2010-02-27T00:00:00.000Z",
-      "fileSize": "2.37 GB"
-    },
-    {
-      "title": "The Last Express (1997) PC",
-      "uris": [
-        "magnet:?xt=urn:btih:a79fb26a1f2e6efdaa5b829bf53fe2018b37ea5a&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
-      ],
-      "uploadDate": "2010-02-28T00:00:00.000Z",
-      "fileSize": "1.83 GB"
-    },
-    {
-      "title": "Mass Effect (2008) PC | Repack от 2ndra",
-      "uris": [
-        "magnet:?xt=urn:btih:83dad87d1350df2c9585b9c13feaca18d413d1d4&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
-      ],
-      "uploadDate": "2010-02-28T00:00:00.000Z",
-      "fileSize": "6.61 GB"
-    },
-    {
-      "title": "Command & Conquer: Generals - Zero Hour (2003) PC",
-      "uris": [
-        "magnet:?xt=urn:btih:947031b68afcefcdab09af0c7407d81f4233a74e&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
-      ],
-      "uploadDate": "2010-02-28T00:00:00.000Z",
-      "fileSize": "1.58 GB"
-    },
-    {
-      "title": "Combat Mission: Shock Force / Линия фронта. Ближний Восток (2007) PC",
-      "uris": [
-        "magnet:?xt=urn:btih:087bf697c8a76aeca833b7ee8afaaaad0b062abd&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
-      ],
-      "uploadDate": "2010-02-28T00:00:00.000Z",
-      "fileSize": "671.84 MB"
-    },
-    {
-      "title": "Морпех - Антология (2008) PC",
-      "uris": [
-        "magnet:?xt=urn:btih:6651443b35b573290774b284c68b439aeb22a43a&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
-      ],
-      "uploadDate": "2010-03-01T00:00:00.000Z",
-      "fileSize": "2.66 GB"
-    },
-    {
-      "title": "Зеркало тайн / Mirror Mysteries (2010) PC",
-      "uris": [
-        "magnet:?xt=urn:btih:e08609c4a24633001971dd9675ec6990cd0df53c&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
-      ],
-      "uploadDate": "2010-03-01T00:00:00.000Z",
-      "fileSize": "79.02 MB"
     },
     {
       "title": "Haunted Mansion: Mirrors / Особняк с призраками: Зеркала (2010) PC",
@@ -12314,14 +12186,6 @@
       "fileSize": "34.34 MB"
     },
     {
-      "title": "Лучшие из лучших: Баскетбол / International Basketball 2010 (2010) PC",
-      "uris": [
-        "magnet:?xt=urn:btih:8a6db6b42e3fd2ca573201a60469f16620dffa04&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
-      ],
-      "uploadDate": "2010-09-15T00:00:00.000Z",
-      "fileSize": "0.98 GB"
-    },
-    {
       "title": "Космическая Империя IV / Space Empires IV Deluxe (2007) PC",
       "uris": [
         "magnet:?xt=urn:btih:a9a8fc1f0434a0ace706e3bdd07cb205addb3274&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
@@ -12336,14 +12200,6 @@
       ],
       "uploadDate": "2010-09-14T00:00:00.000Z",
       "fileSize": "482.18 MB"
-    },
-    {
-      "title": "Fallout 3 - Diamond Edition (2010) PC | RePack от cdman",
-      "uris": [
-        "magnet:?xt=urn:btih:21787f61eadefc01ebf96198c1e5f7c630e72778&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
-      ],
-      "uploadDate": "2010-09-15T00:00:00.000Z",
-      "fileSize": "6.19 GB"
     },
     {
       "title": "Побег из замка Франкенштейна / Escape from Frankenstein's Castle (2010) PC",
@@ -13056,6 +12912,38 @@
       ],
       "uploadDate": "2010-10-02T00:00:00.000Z",
       "fileSize": "1.37 GB"
+    },
+    {
+      "title": "X-Blades (2009) PC | Lossless Repack от R.G.Spieler",
+      "uris": [
+        "magnet:?xt=urn:btih:190207f822e37e01b0a5c29e47e37de93e55b6db&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
+      ],
+      "uploadDate": "2010-10-02T00:00:00.000Z",
+      "fileSize": "2.18 GB"
+    },
+    {
+      "title": "Шахматы - Chessmaster: Grandmaster Edition (2007) PC",
+      "uris": [
+        "magnet:?xt=urn:btih:38fff67976a494c62f61342d41ee50696014f3c7&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
+      ],
+      "uploadDate": "2010-10-02T00:00:00.000Z",
+      "fileSize": "1.82 GB"
+    },
+    {
+      "title": "Апач 2: Русский синдром / Operation Air Assault 2 (2003) PC",
+      "uris": [
+        "magnet:?xt=urn:btih:78e267a5d69aaba0f81cc29239bf7002cbd4cda9&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
+      ],
+      "uploadDate": "2010-10-02T00:00:00.000Z",
+      "fileSize": "305.41 MB"
+    },
+    {
+      "title": "Space Siege (2008) PC | RePack от R.G.Spieler",
+      "uris": [
+        "magnet:?xt=urn:btih:6ecb7f86bf8ed7471e6a626bfbb870cf61719828&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
+      ],
+      "uploadDate": "2010-10-03T00:00:00.000Z",
+      "fileSize": "1.52 GB"
     },
     {
       "title": "FIFA 11 (2010) PC | Repack by Vitek",
@@ -13818,28 +13706,12 @@
       "fileSize": "537.87 MB"
     },
     {
-      "title": "Axel & Pixel (2010) PC",
-      "uris": [
-        "magnet:?xt=urn:btih:e3f78d2234573e3b870bbb98795ad441eeee013e&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
-      ],
-      "uploadDate": "2010-10-23T00:00:00.000Z",
-      "fileSize": "494.01 MB"
-    },
-    {
       "title": "Freedom Fighters (2003) PC",
       "uris": [
         "magnet:?xt=urn:btih:d2dfe3d85303946987fb657092d65c02cb47cad9&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
       ],
       "uploadDate": "2010-10-23T00:00:00.000Z",
       "fileSize": "549.66 MB"
-    },
-    {
-      "title": "Crazy Taxi 3 (2004) PC",
-      "uris": [
-        "magnet:?xt=urn:btih:aecdbd798266daddfa9c7c51e0fd29047908a20c&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
-      ],
-      "uploadDate": "2010-10-23T00:00:00.000Z",
-      "fileSize": "555.59 MB"
     },
     {
       "title": "PES 2011 / Pro Evolution Soccer 2011 (2010) PC",
@@ -14440,6 +14312,38 @@
       ],
       "uploadDate": "2010-11-06T00:00:00.000Z",
       "fileSize": "1.92 GB"
+    },
+    {
+      "title": "Velvet Assassin (2009) PC | RePack by R.G.R3PacK",
+      "uris": [
+        "magnet:?xt=urn:btih:5c1389191e1f7881aaca000f806094990a351a49&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
+      ],
+      "uploadDate": "2010-11-06T00:00:00.000Z",
+      "fileSize": "3.68 GB"
+    },
+    {
+      "title": "Need for Speed: Most Wanted - Technically Improved (2005) PC | RePack",
+      "uris": [
+        "magnet:?xt=urn:btih:d3c31dcd2be330c8141bf172a37f2b6e00cd9ca2&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
+      ],
+      "uploadDate": "2010-11-06T00:00:00.000Z",
+      "fileSize": "1.95 GB"
+    },
+    {
+      "title": "Call of Cthulhu: Dark Corners of the Earth (2006) PC | RePack от R.G. ReCoding",
+      "uris": [
+        "magnet:?xt=urn:btih:68ea155771b6f6bf7f1fb9cab068d163a3e65b89&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
+      ],
+      "uploadDate": "2010-11-06T00:00:00.000Z",
+      "fileSize": "912.71 MB"
+    },
+    {
+      "title": "Робин Гуд: Легенда Шервуда / Robin Hood: The Legend of Sherwood (2002) PC",
+      "uris": [
+        "magnet:?xt=urn:btih:a9844e8dfa54fe6acfc9838761cdf04ba753a162&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
+      ],
+      "uploadDate": "2010-11-06T00:00:00.000Z",
+      "fileSize": "695.66 MB"
     },
     {
       "title": "Робин Гуд: Легенда Шервуда / Robin Hood: The Legend of Sherwood (2002) PC",
@@ -15114,14 +15018,6 @@
       "fileSize": "3.25 GB"
     },
     {
-      "title": "Metal Slug [6 in 1] (1996-2006) PC | Антология",
-      "uris": [
-        "magnet:?xt=urn:btih:85a2437310cef24beec305450febc65627e64db9&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
-      ],
-      "uploadDate": "2010-11-27T00:00:00.000Z",
-      "fileSize": "287.37 MB"
-    },
-    {
       "title": "Дома с Привидениями: Клиника Зеленые Холмы (2010) PC",
       "uris": [
         "magnet:?xt=urn:btih:d0a775af0c0790d95fac2c42cc4bc5e646803af1&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
@@ -15136,14 +15032,6 @@
       ],
       "uploadDate": "2010-11-27T00:00:00.000Z",
       "fileSize": "11.42 GB"
-    },
-    {
-      "title": "Battlestrike: Shadow of Stalingrad (2009) PC",
-      "uris": [
-        "magnet:?xt=urn:btih:60892af4a8e513a533953b951aab8ea0cf9b12b1&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
-      ],
-      "uploadDate": "2010-11-27T00:00:00.000Z",
-      "fileSize": "1.04 GB"
     },
     {
       "title": "Кровавая месть / District Wars (2009) PC",
@@ -16434,14 +16322,6 @@
       "fileSize": "8.57 MB"
     },
     {
-      "title": "Мафия / Mafia - Антология (2002-2010) PC | Repack by MOP030B от Zlofenix",
-      "uris": [
-        "magnet:?xt=urn:btih:e58d0d744701d327770ec231e51fe84e93359567&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
-      ],
-      "uploadDate": "2011-03-12T00:00:00.000Z",
-      "fileSize": "5.57 GB"
-    },
-    {
       "title": "Разыскивается Тасманский Дьявол / TazWanted (2002) PC by Egorea1999",
       "uris": [
         "magnet:?xt=urn:btih:a7bc90e84a7500db0e783ae22c90dd057cc1e5ae&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
@@ -17506,6 +17386,14 @@
       "fileSize": "2.99 GB"
     },
     {
+      "title": "Рыцари Чести / Knights of Honor (2004) PC | Лицензия",
+      "uris": [
+        "magnet:?xt=urn:btih:502db7561bbd373050117315a08391bd7618618c&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
+      ],
+      "uploadDate": "2011-01-15T00:00:00.000Z",
+      "fileSize": "1.62 GB"
+    },
+    {
       "title": "Brothers in Arms - Антология (2005-2008) PC | Rip by MOP030B от Zlofenix",
       "uris": [
         "magnet:?xt=urn:btih:b18aae92aa0aa86ccf5e684cac9c97de60b218e3&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
@@ -18338,12 +18226,28 @@
       "fileSize": "111.98 MB"
     },
     {
-      "title": "Tag: The Power of Paint (2008) PC",
+      "title": "PES 2011 / Pro Evolution Soccer 2011 (2010) РС | Repack",
       "uris": [
-        "magnet:?xt=urn:btih:f21f0314c7a8e40c42b65d71b0635f10faa6fad7&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
+        "magnet:?xt=urn:btih:a9bdf9613a0c2efeabff32237eda6b95c8b12c5f&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
       ],
-      "uploadDate": "2011-02-05T00:00:00.000Z",
-      "fileSize": "50.58 MB"
+      "uploadDate": "2011-02-03T00:00:00.000Z",
+      "fileSize": "3.40 GB"
+    },
+    {
+      "title": "Project Eden (2001) PC | RePack от R.G. ReCoding",
+      "uris": [
+        "magnet:?xt=urn:btih:4d78014195b6d45671438169e1c7f4e992a8a604&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
+      ],
+      "uploadDate": "2011-02-04T00:00:00.000Z",
+      "fileSize": "255.08 MB"
+    },
+    {
+      "title": "Meet the Robinsons (2007) PC",
+      "uris": [
+        "magnet:?xt=urn:btih:1b0d8ad437a788676fb01cc2a136cc67678d789e&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
+      ],
+      "uploadDate": "2011-02-04T00:00:00.000Z",
+      "fileSize": "1.11 GB"
     },
     {
       "title": "Советские игровые автоматы: Конек-горбунок; Бильярд; Снежная королева; SOS (1985) PC",
@@ -18360,54 +18264,6 @@
       ],
       "uploadDate": "2011-02-04T00:00:00.000Z",
       "fileSize": "1.57 GB"
-    },
-    {
-      "title": "The Hulk / Халк (2003) PC",
-      "uris": [
-        "magnet:?xt=urn:btih:b0b61d8b1052e6a0ad03ee613261ad3d4f398a20&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
-      ],
-      "uploadDate": "2011-02-05T00:00:00.000Z",
-      "fileSize": "1.17 GB"
-    },
-    {
-      "title": "Bus Driver (2007) PC",
-      "uris": [
-        "magnet:?xt=urn:btih:bc61d9add32f97b8435ca1da5af86638f3148faf&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
-      ],
-      "uploadDate": "2011-02-05T00:00:00.000Z",
-      "fileSize": "559.52 MB"
-    },
-    {
-      "title": "Код доступа: РАЙ / Paradise Cracked (2002) PC | RePack",
-      "uris": [
-        "magnet:?xt=urn:btih:48eccd3866ee2e9748becb84effea1070dc49588&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
-      ],
-      "uploadDate": "2011-02-05T00:00:00.000Z",
-      "fileSize": "2.36 GB"
-    },
-    {
-      "title": "Антанта Gold / Entente Gold (2006) PC",
-      "uris": [
-        "magnet:?xt=urn:btih:4368cd8563d213956ed772dbba60ef047076522f&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
-      ],
-      "uploadDate": "2011-02-05T00:00:00.000Z",
-      "fileSize": "678.83 MB"
-    },
-    {
-      "title": "Championship Manager 2010 (2009) PC | RePack",
-      "uris": [
-        "magnet:?xt=urn:btih:c86052fd43d02ed746dc8e30287da65b9ac0ca32&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
-      ],
-      "uploadDate": "2011-02-06T00:00:00.000Z",
-      "fileSize": "2.15 GB"
-    },
-    {
-      "title": "Alpha Protocol (2010) PC | Lossless Repack от Spieler",
-      "uris": [
-        "magnet:?xt=urn:btih:983d09d4d5d87effe1f706b6b147e5b8d205e8c9&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
-      ],
-      "uploadDate": "2011-02-06T00:00:00.000Z",
-      "fileSize": "8.35 GB"
     },
     {
       "title": "Черная метка / The Hunt (2008) РС | Repack",
@@ -22258,12 +22114,28 @@
       "fileSize": "1.76 GB"
     },
     {
+      "title": "Новый хит / The Next Big Thing (2011) PC | RePack от R.G.Repacker`s",
+      "uris": [
+        "magnet:?xt=urn:btih:659b976657fcafc453203455575df276fcb9afe7&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
+      ],
+      "uploadDate": "2011-04-28T00:00:00.000Z",
+      "fileSize": "3.65 GB"
+    },
+    {
       "title": "Theseus: Возвращение Героя (2005) PC",
       "uris": [
         "magnet:?xt=urn:btih:62ee9d6cc1abb6f5377e0e367e639e0c875e07db&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
       ],
       "uploadDate": "2011-04-28T00:00:00.000Z",
       "fileSize": "120.94 MB"
+    },
+    {
+      "title": "Невский титбит (2005) PC",
+      "uris": [
+        "magnet:?xt=urn:btih:f529ad69a18ac925739a219ccfdbb17f0c71ef89&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
+      ],
+      "uploadDate": "2011-04-28T00:00:00.000Z",
+      "fileSize": "0.99 GB"
     },
     {
       "title": "Limbo of the Lost (2008) PC",
@@ -26826,6 +26698,14 @@
       "fileSize": "4.01 GB"
     },
     {
+      "title": "Антология Анк / Anthology Ankh (2006-2008) PC | RePack",
+      "uris": [
+        "magnet:?xt=urn:btih:652b9c40bd64fec484c62f2459469bd821c061be&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
+      ],
+      "uploadDate": "2011-07-23T00:00:00.000Z",
+      "fileSize": "1.76 GB"
+    },
+    {
       "title": "WW II Battle Tanks T-34 VS. Tiger (2007) PC от Fenixx",
       "uris": [
         "magnet:?xt=urn:btih:5ffb9a367ac8b09199d412d2755700f90e4dcfd4&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
@@ -28994,12 +28874,36 @@
       "fileSize": "1.69 GB"
     },
     {
+      "title": "Проклятие Изиды / Curse: The Eye of Isis (2003) PC",
+      "uris": [
+        "magnet:?xt=urn:btih:c4e2120ef774881667e8c261e9880c1b343bdd9d&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
+      ],
+      "uploadDate": "2011-08-19T00:00:00.000Z",
+      "fileSize": "389.84 MB"
+    },
+    {
+      "title": "Shaun White: Dilogy (2008-2010) PC | Repack от R.G. Catalyst",
+      "uris": [
+        "magnet:?xt=urn:btih:116060826e23a2037fab684d04a9b0b576a86511&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
+      ],
+      "uploadDate": "2011-08-19T00:00:00.000Z",
+      "fileSize": "4.36 GB"
+    },
+    {
       "title": "Tom Clancy`s Splinter Cell - Антология (2003-2005) PC | Rip",
       "uris": [
         "magnet:?xt=urn:btih:cb09f2e31f34fcfc3f7a563af22e907dc1db3ab0&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
       ],
       "uploadDate": "2011-08-20T00:00:00.000Z",
       "fileSize": "5.06 GB"
+    },
+    {
+      "title": "Чемпионат Сноубордингa 2004 / Championship Snowboarding 2004 (2003) PC",
+      "uris": [
+        "magnet:?xt=urn:btih:130fdb14b04e90f8d3a3165b753ca8cf1333025c&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
+      ],
+      "uploadDate": "2011-08-19T00:00:00.000Z",
+      "fileSize": "448.97 MB"
     },
     {
       "title": "Death Track: Возрождение / Death Track: Resurrection (2008) PC",
@@ -32930,6 +32834,14 @@
       "fileSize": "595.47 MB"
     },
     {
+      "title": "Grand Ages Rome - Gold Edition (2010) PC | RePack от R.G. Catalyst",
+      "uris": [
+        "magnet:?xt=urn:btih:2841e372376bc4a4935bfa96aded1849dab7fb9b&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
+      ],
+      "uploadDate": "2011-10-07T00:00:00.000Z",
+      "fileSize": "1.79 GB"
+    },
+    {
       "title": "HellGate: London (2007) PC | Repack by MOP030B от Zlofenix",
       "uris": [
         "magnet:?xt=urn:btih:d8fb68ceeefc16d7e20884c526ce264891d6516f&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
@@ -33666,12 +33578,52 @@
       "fileSize": "446.59 MB"
     },
     {
+      "title": "Cities XL 2012 (2011) PC | Lossless Repack от R.G. Catalyst",
+      "uris": [
+        "magnet:?xt=urn:btih:2d5e9dc938dd98dada998727f467df2cd6b3353c&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
+      ],
+      "uploadDate": "2011-10-21T00:00:00.000Z",
+      "fileSize": "3.00 GB"
+    },
+    {
+      "title": "Cities XL 2012 (2011) PC",
+      "uris": [
+        "magnet:?xt=urn:btih:7c1876b72df946b12a6148a864f2e96bd1e0ae7a&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
+      ],
+      "uploadDate": "2011-10-21T00:00:00.000Z",
+      "fileSize": "5.27 GB"
+    },
+    {
+      "title": "Resident Evil + Resident Evil 2: Platinum + Resident Evil 3: Last Escape (1996-1999) PC",
+      "uris": [
+        "magnet:?xt=urn:btih:8e64eaedc46aaf005937ac6d75638026c397930e&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
+      ],
+      "uploadDate": "2011-10-21T00:00:00.000Z",
+      "fileSize": "2.31 GB"
+    },
+    {
+      "title": "Drawn 3: В погоне за тенями. Коллекционное издание / Drawn 3: Trail of Shadows Collector's Edition (2011) PC",
+      "uris": [
+        "magnet:?xt=urn:btih:5149a39e08d3cccc0e00b1096ce4b2f415d655d0&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
+      ],
+      "uploadDate": "2011-10-21T00:00:00.000Z",
+      "fileSize": "452.68 MB"
+    },
+    {
       "title": "Месть Гладиатора / Gladiator: Sword of Vengeance (2005) PC",
       "uris": [
         "magnet:?xt=urn:btih:14fca007c882d830571e57aef263d7fb3c141485&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
       ],
       "uploadDate": "2019-08-06T00:00:00.000Z",
       "fileSize": "924.41 MB"
+    },
+    {
+      "title": "Рок Менеджер / Rock Manager (2001) PC",
+      "uris": [
+        "magnet:?xt=urn:btih:2b4f9f9c04d6777729ec41c739af144b929b5cb8&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
+      ],
+      "uploadDate": "2011-10-21T00:00:00.000Z",
+      "fileSize": "629.05 MB"
     },
     {
       "title": "Orbyx Deluxe (2011) PC",
@@ -38768,6 +38720,14 @@
       ],
       "uploadDate": "2012-01-05T00:00:00.000Z",
       "fileSize": "274.84 MB"
+    },
+    {
+      "title": "Рыцари Хаоса / Chaos Legion (2005) PC | RePack",
+      "uris": [
+        "magnet:?xt=urn:btih:68a8586a9f2c2c01dda5052a4d2015e60475015c&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
+      ],
+      "uploadDate": "2012-01-05T00:00:00.000Z",
+      "fileSize": "779.45 MB"
     },
     {
       "title": "Memento Mori (2008) РС",
@@ -45130,6 +45090,14 @@
       "fileSize": "525.64 MB"
     },
     {
+      "title": "Красная шапочка: умна и опасна (2010) PC",
+      "uris": [
+        "magnet:?xt=urn:btih:21cf451d7dafe91745e9f933b3ead26e87b79158&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
+      ],
+      "uploadDate": "2012-03-25T00:00:00.000Z",
+      "fileSize": "397.27 MB"
+    },
+    {
       "title": "Белка и Стрелка. Звездные собаки (2010) PC | Repack от Fenixx",
       "uris": [
         "magnet:?xt=urn:btih:907c050f370ece861134f48af3507f91ec7d3d91&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
@@ -45376,6 +45344,14 @@
       ],
       "uploadDate": "2012-03-29T00:00:00.000Z",
       "fileSize": "169.04 MB"
+    },
+    {
+      "title": "GTA / Grand Theft Auto - Антология (1998-2010) PC | RePack от R.G. Механики",
+      "uris": [
+        "magnet:?xt=urn:btih:9c61dac50c8ddf99567f46db16d757a5e0bda223&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
+      ],
+      "uploadDate": "2012-12-11T00:00:00.000Z",
+      "fileSize": "19.33 GB"
     },
     {
       "title": "Сага о вампире. Начало (2012) PC",
@@ -47264,6 +47240,14 @@
       ],
       "uploadDate": "2012-04-22T00:00:00.000Z",
       "fileSize": "32.40 MB"
+    },
+    {
+      "title": "Шоу марионеток. Возвращение в Джойвилль / PuppetShow 4: Return to Joyville CE (2012) PC",
+      "uris": [
+        "magnet:?xt=urn:btih:af5cd9d3be89a082316581137fa1b16985e770c8&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
+      ],
+      "uploadDate": "2012-04-22T00:00:00.000Z",
+      "fileSize": "497.90 MB"
     },
     {
       "title": "Космические рейнджеры 2: Доминаторы. Перезагрузка (2007) PC",
@@ -58618,6 +58602,14 @@
       "fileSize": "194.80 MB"
     },
     {
+      "title": "E.Y.E.: Divine Cybermancy [v.1.37] (2011) PC | Repack от Fenixx",
+      "uris": [
+        "magnet:?xt=urn:btih:64823b36f33a430c0dd453d9e0e5d0d12f28a2fd&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
+      ],
+      "uploadDate": "2012-10-22T00:00:00.000Z",
+      "fileSize": "1.52 GB"
+    },
+    {
       "title": "Спецотряд Кобра 11: Undercover / Alarm for Cobra 11: Crash Time 5 - Undercover / Alarm für Cobra 11: Crash Time 5 - Undercover (2012) PC | RePack by SeregA-Lus",
       "uris": [
         "magnet:?xt=urn:btih:d43a79e9a08236ac934715d0a8a4bafe2e44ea31&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
@@ -60298,12 +60290,60 @@
       "fileSize": "1.40 GB"
     },
     {
+      "title": "Magistry (2012) PC | Лицензия",
+      "uris": [
+        "magnet:?xt=urn:btih:b5e0775ce7b89ab96cbb065c947f42bf379d6d32&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
+      ],
+      "uploadDate": "2012-12-11T00:00:00.000Z",
+      "fileSize": "5.90 MB"
+    },
+    {
       "title": "Wizardry 8 (2001) PC",
       "uris": [
         "magnet:?xt=urn:btih:f2191d421f7728d8dcef9d522e9ee72a2b973d95&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
       ],
       "uploadDate": "2012-12-11T00:00:00.000Z",
       "fileSize": "2.26 GB"
+    },
+    {
+      "title": "Krater. Shadows over Solside - Collector's Edition (2012) PC | Steam-Rip от R.G. Origins",
+      "uris": [
+        "magnet:?xt=urn:btih:c82076eb8926817c1e01b8f9a980f9c30ea566a6&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
+      ],
+      "uploadDate": "2012-12-11T00:00:00.000Z",
+      "fileSize": "2.92 GB"
+    },
+    {
+      "title": "Krater. Shadows over Solside (2012) PC | Repack от R.G. UPG",
+      "uris": [
+        "magnet:?xt=urn:btih:960700cfeaca6c92f94099efd7f5afa3da2be2ed&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
+      ],
+      "uploadDate": "2012-12-11T00:00:00.000Z",
+      "fileSize": "2.06 GB"
+    },
+    {
+      "title": "Krater. Shadows over Solside - Collector's Edition (2012) PC | Lossless Repack",
+      "uris": [
+        "magnet:?xt=urn:btih:59aa50e7cd959567ca85344023821ad3e75ec60d&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
+      ],
+      "uploadDate": "2012-12-11T00:00:00.000Z",
+      "fileSize": "1.92 GB"
+    },
+    {
+      "title": "Тени. Плата за грехи / Shadows (2012) PC",
+      "uris": [
+        "magnet:?xt=urn:btih:1353b91cfcd7a3080ce309b8193145a25456b2b6&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
+      ],
+      "uploadDate": "2012-12-11T00:00:00.000Z",
+      "fileSize": "1.14 GB"
+    },
+    {
+      "title": "Pride Of Nations (2011) PC | Лицензия",
+      "uris": [
+        "magnet:?xt=urn:btih:6e1346e371a0b4a88993e29f4c1872ec3d972fa4&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
+      ],
+      "uploadDate": "2012-12-11T00:00:00.000Z",
+      "fileSize": "1.31 GB"
     },
     {
       "title": "Sonic Generations (2011) PC | Лицензия",
@@ -61232,14 +61272,6 @@
       ],
       "uploadDate": "2013-01-05T00:00:00.000Z",
       "fileSize": "803.76 MB"
-    },
-    {
-      "title": "Территория тьмы / Dusk-12 (2007) PC | Repack от R.G. UPG",
-      "uris": [
-        "magnet:?xt=urn:btih:90b0807a4d3bcc717160283bf8fc0ad90d517668&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
-      ],
-      "uploadDate": "2021-02-12T00:00:00.000Z",
-      "fileSize": "1.75 GB"
     },
     {
       "title": "S.T.A.L.K.E.R.: Тень Чернобыля - Возвращение Шрама [Часть 1-я] (2012) PC | RePack от SeregA-Lus",
@@ -74506,14 +74538,6 @@
       "fileSize": "6.86 GB"
     },
     {
-      "title": "Куб - Расширенная версия / EDGE Extended [v 1.0.2448] (2011) PC",
-      "uris": [
-        "magnet:?xt=urn:btih:540ca5231c5fd1ec669a5da622055c7267648ced&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
-      ],
-      "uploadDate": "2014-04-18T00:00:00.000Z",
-      "fileSize": "182.06 MB"
-    },
-    {
       "title": "Тупой Дозор (2006) PC | Лицензия",
       "uris": [
         "magnet:?xt=urn:btih:f546ff95b69854965b5df750cd041332a13c545f&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
@@ -74584,46 +74608,6 @@
       ],
       "uploadDate": "2014-04-17T00:00:00.000Z",
       "fileSize": "1.63 GB"
-    },
-    {
-      "title": "Halo: Spartan Assault (2014) PC | RePack от Audioslave",
-      "uris": [
-        "magnet:?xt=urn:btih:6bd8ec9e4af93ae1fa01cda48f859fb17a4d0a59&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
-      ],
-      "uploadDate": "2014-04-17T00:00:00.000Z",
-      "fileSize": "696.16 MB"
-    },
-    {
-      "title": "Strike Suit Zero (2013) PC | RePack от Audioslave",
-      "uris": [
-        "magnet:?xt=urn:btih:9b4d5e7122754d0a25425a3b3b1680082082cff2&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
-      ],
-      "uploadDate": "2014-04-17T00:00:00.000Z",
-      "fileSize": "1.26 GB"
-    },
-    {
-      "title": "Готика 4: Аркания / Arcania: Gothic 4 [v 1.1.0.1433] + Arcania: Fall of Setarrif [v 1.1496] (2010-2011) PC | RePack от Audioslave",
-      "uris": [
-        "magnet:?xt=urn:btih:b023ca738f15cbe1a742041f6e37739ba49342af&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
-      ],
-      "uploadDate": "2014-04-17T00:00:00.000Z",
-      "fileSize": "3.65 GB"
-    },
-    {
-      "title": "Корсары: Каждому своё / Pirates Odyssey: To Each His Own [v 1.2.2] (2012) PC | Steam-Rip",
-      "uris": [
-        "magnet:?xt=urn:btih:eaf78bdc95930ce8180ffa97da68fb25bfbed793&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
-      ],
-      "uploadDate": "2014-04-18T00:00:00.000Z",
-      "fileSize": "3.70 GB"
-    },
-    {
-      "title": "Foosball - Street Edition (2014) PC | RePack от R.G. Games",
-      "uris": [
-        "magnet:?xt=urn:btih:549c59c74556c77253cdd3bf3ec3d5d596cd39d2&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
-      ],
-      "uploadDate": "2014-04-18T00:00:00.000Z",
-      "fileSize": "502.70 MB"
     },
     {
       "title": "Broken Sword 5: The Serpent's Curse. Episode Two (2014) PC | Лицензия",
@@ -75224,6 +75208,38 @@
       ],
       "uploadDate": "2014-05-07T00:00:00.000Z",
       "fileSize": "287.05 MB"
+    },
+    {
+      "title": "Outlast: Whistleblower (2014) PC | RePack от xatab",
+      "uris": [
+        "magnet:?xt=urn:btih:fad20b0c926b48c33d2380a29107caf2f2c1a505&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
+      ],
+      "uploadDate": "2014-05-07T00:00:00.000Z",
+      "fileSize": "3.30 GB"
+    },
+    {
+      "title": "Ускользающий мир / The Whispered World - Special Edition (2014) PC",
+      "uris": [
+        "magnet:?xt=urn:btih:f4b9d4b5821a63a860f7a62f6dd7f92b0bd92775&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
+      ],
+      "uploadDate": "2014-05-07T00:00:00.000Z",
+      "fileSize": "1.67 GB"
+    },
+    {
+      "title": "Resident Evil 4 Ultimate HD Edition [v 1.0.6] (2014) PC | RePack от R.G. Freedom",
+      "uris": [
+        "magnet:?xt=urn:btih:485c1a65ae67bad853cb3439c18a5d13530168ce&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
+      ],
+      "uploadDate": "2014-05-07T00:00:00.000Z",
+      "fileSize": "8.35 GB"
+    },
+    {
+      "title": "Salvation Prophecy: Война миров (2013) PC | Лицензия",
+      "uris": [
+        "magnet:?xt=urn:btih:f2ff1a642b62f9b11ee29f53f95b88d882513f34&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
+      ],
+      "uploadDate": "2014-05-07T00:00:00.000Z",
+      "fileSize": "0.99 GB"
     },
     {
       "title": "Sanctum 2 [v 1.1.25536] (2013) PC | Лицензия",
@@ -84730,46 +84746,6 @@
       "fileSize": "7.10 GB"
     },
     {
-      "title": "Need for Speed: Carbon (2006) PC | RePack от R.G. Механики",
-      "uris": [
-        "magnet:?xt=urn:btih:cff908379bea4ed18b5ece0be2f9af241f572b52&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
-      ],
-      "uploadDate": "2015-04-05T00:00:00.000Z",
-      "fileSize": "3.15 GB"
-    },
-    {
-      "title": "Belladonna (2015) PC | RePack от Let'sPlay",
-      "uris": [
-        "magnet:?xt=urn:btih:71cb772fa7f80e5f7de925457e2ed0267e06f4c4&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
-      ],
-      "uploadDate": "2015-04-05T00:00:00.000Z",
-      "fileSize": "486.73 MB"
-    },
-    {
-      "title": "Call of Duty - Антология (2004-2014) PC | RiP от R.G. Freedom",
-      "uris": [
-        "magnet:?xt=urn:btih:b023d6f5658d306a75fec6020c74302172770151&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
-      ],
-      "uploadDate": "2015-04-06T00:00:00.000Z",
-      "fileSize": "98.15 GB"
-    },
-    {
-      "title": "Загадки прошлого / Riddles of the Past (2015) PC",
-      "uris": [
-        "magnet:?xt=urn:btih:f62088a7ccadfbbb4c9cdc66c7ec4cbad2934779&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
-      ],
-      "uploadDate": "2015-04-06T00:00:00.000Z",
-      "fileSize": "568.93 MB"
-    },
-    {
-      "title": "DiRT 3 Complete Edition (2015) PC | RePack от FitGirl",
-      "uris": [
-        "magnet:?xt=urn:btih:5382ed8badc29248ee556a8ba78a5b6b15c3ca2f&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
-      ],
-      "uploadDate": "2015-04-07T00:00:00.000Z",
-      "fileSize": "3.90 GB"
-    },
-    {
       "title": "Need for Speed: Undercover (2008) PC | RePack от R.G. Механики",
       "uris": [
         "magnet:?xt=urn:btih:cca87f73660f4952c40b961317d794955915ab73&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
@@ -85306,6 +85282,38 @@
       "fileSize": "1.29 GB"
     },
     {
+      "title": "Paranoia 2: Savior (2015) PC | Лицензия",
+      "uris": [
+        "magnet:?xt=urn:btih:9e186408b076e175c7ce4fdc3621d0235be10cc7&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
+      ],
+      "uploadDate": "2015-05-01T00:00:00.000Z",
+      "fileSize": "1.00 GB"
+    },
+    {
+      "title": "Trine: Enchanted Edition [v 2.12 build 510] (2014) PC",
+      "uris": [
+        "magnet:?xt=urn:btih:83d83e51384f4f64bd883dbbfe0b346e43d9f6ab&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
+      ],
+      "uploadDate": "2015-05-02T00:00:00.000Z",
+      "fileSize": "3.24 GB"
+    },
+    {
+      "title": "Trine 2: Complete Story [v 2.01 build 447] (2013) PC",
+      "uris": [
+        "magnet:?xt=urn:btih:d3d0836d206e97620dfafbcd89e15010f017f2fb&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
+      ],
+      "uploadDate": "2015-05-02T00:00:00.000Z",
+      "fileSize": "3.85 GB"
+    },
+    {
+      "title": "World of Warplanes [v 1.7.5] (2011-2015) PC | RePack от SeregA-Lus",
+      "uris": [
+        "magnet:?xt=urn:btih:569e76f642ee5325408e3784aaa99b0c6c0e8d5d&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
+      ],
+      "uploadDate": "2015-05-03T00:00:00.000Z",
+      "fileSize": "7.94 GB"
+    },
+    {
       "title": "BlazeRush (2014) PC | RePack от xGhost",
       "uris": [
         "magnet:?xt=urn:btih:3d430271237f2784394b1a8dd1f1dabf824ee97d&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
@@ -85802,14 +85810,6 @@
       "fileSize": "783.56 MB"
     },
     {
-      "title": "Badland: Game of the Year Edition (2015) PC",
-      "uris": [
-        "magnet:?xt=urn:btih:5a7ac58d8b9509ad24bcd0d271ed93a41c572ecf&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
-      ],
-      "uploadDate": "2015-05-28T00:00:00.000Z",
-      "fileSize": "205.92 MB"
-    },
-    {
       "title": "Темный Лабиринт 4: Двенадцать Страхов / Sable Maze 4: Twelve Fears CE (2015) РС",
       "uris": [
         "magnet:?xt=urn:btih:7de7e3b15a00ad2f268f55d3b8d46600bb3c6b0e&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
@@ -85824,46 +85824,6 @@
       ],
       "uploadDate": "2015-05-28T00:00:00.000Z",
       "fileSize": "668.58 MB"
-    },
-    {
-      "title": "Cat on a Diet (2015) PC",
-      "uris": [
-        "magnet:?xt=urn:btih:e6916dbe2b5de7afd5cf5a9e25dfc8836e51964b&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
-      ],
-      "uploadDate": "2015-05-28T00:00:00.000Z",
-      "fileSize": "50.35 MB"
-    },
-    {
-      "title": "Star Horizon (2015) PC | Лицензия",
-      "uris": [
-        "magnet:?xt=urn:btih:02f5d43de37e7919c945129c4c8eb817fd0e72e8&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
-      ],
-      "uploadDate": "2015-05-28T00:00:00.000Z",
-      "fileSize": "807.41 MB"
-    },
-    {
-      "title": "MouseCraft [v 1.2] (2014) PC | RePack от R.G. Механики",
-      "uris": [
-        "magnet:?xt=urn:btih:b2fdc40e24de351d78eb1d228af549560f646046&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
-      ],
-      "uploadDate": "2015-05-28T00:00:00.000Z",
-      "fileSize": "470.99 MB"
-    },
-    {
-      "title": "Iron Brigade (2012) PC | RePack от R.G. Механики",
-      "uris": [
-        "magnet:?xt=urn:btih:427c6b23ea1a0e91d0af92a7565b0c59aced3df0&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
-      ],
-      "uploadDate": "2015-05-28T00:00:00.000Z",
-      "fileSize": "1.47 GB"
-    },
-    {
-      "title": "Magnetic: Cage Closed (2015) PC | RePack от FitGirl",
-      "uris": [
-        "magnet:?xt=urn:btih:1353dc3c678c571b934265bccd1bee0cff65c589&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
-      ],
-      "uploadDate": "2015-05-29T00:00:00.000Z",
-      "fileSize": "1.15 GB"
     },
     {
       "title": "The Bureau: XCOM Declassified (2013) РС | RePack от R.G. Catalyst",
@@ -86290,12 +86250,44 @@
       "fileSize": "5.22 GB"
     },
     {
+      "title": "Mighty Dungeons [v1.10.2] (2015) PC",
+      "uris": [
+        "magnet:?xt=urn:btih:719ed2fa6b78af0c09577251c2fbb0dd493a0c95&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
+      ],
+      "uploadDate": "2015-06-20T00:00:00.000Z",
+      "fileSize": "48.39 MB"
+    },
+    {
       "title": "Aarklash - Legacy (2013) PC | Лицензия",
       "uris": [
         "magnet:?xt=urn:btih:4dea9a574b93b28721ced9eb596fdd2c4d4c049f&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
       ],
       "uploadDate": "2015-06-20T00:00:00.000Z",
       "fileSize": "1.17 GB"
+    },
+    {
+      "title": "Темные предания 8: Русалочка и пурпурная волна. Коллекционное издание (2015) PC",
+      "uris": [
+        "magnet:?xt=urn:btih:779deb93eddc1f465eb761bd52df5330b46f3409&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
+      ],
+      "uploadDate": "2015-06-21T00:00:00.000Z",
+      "fileSize": "827.13 MB"
+    },
+    {
+      "title": "Сказки королевы 2: Грехи прошлого. Коллекционное издание (2015) PC",
+      "uris": [
+        "magnet:?xt=urn:btih:cb4e62744e9bbe8f51a9ae93be955cf65ebf6cd5&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
+      ],
+      "uploadDate": "2015-06-21T00:00:00.000Z",
+      "fileSize": "972.95 MB"
+    },
+    {
+      "title": "Max: The Curse of Brotherhood [v 4.3.1.45] (2014) PC | RePack от R.G. Механики",
+      "uris": [
+        "magnet:?xt=urn:btih:608234e648218f6a6e718d28c677f676c1753ed8&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
+      ],
+      "uploadDate": "2015-06-21T00:00:00.000Z",
+      "fileSize": "1.76 GB"
     },
     {
       "title": "Football Manager 2015 [v 15.3.2] (2014) PC | RePack от R.G. Catalyst",
@@ -86832,38 +86824,6 @@
       ],
       "uploadDate": "2015-07-15T00:00:00.000Z",
       "fileSize": "1.73 GB"
-    },
-    {
-      "title": "Крутой Сэм 3: BFE / Serious Sam 3: BFE (2011) PC | RePack от SEYTER",
-      "uris": [
-        "magnet:?xt=urn:btih:90c0ec02474aa451b7b750bc73d6c011deeb3b45&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
-      ],
-      "uploadDate": "2015-07-15T00:00:00.000Z",
-      "fileSize": "3.46 GB"
-    },
-    {
-      "title": "Broken Age: Complete (2014) PC | RePack от R.G. Freedom",
-      "uris": [
-        "magnet:?xt=urn:btih:66daf77f7028765ca4f3bee6f5cb90aad7474eff&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
-      ],
-      "uploadDate": "2015-07-16T00:00:00.000Z",
-      "fileSize": "1.94 GB"
-    },
-    {
-      "title": "Taken (2015) PC | RePack от TypeZX",
-      "uris": [
-        "magnet:?xt=urn:btih:2783720bdf611605b8d5379d7489225da4edba9e&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
-      ],
-      "uploadDate": "2015-07-16T00:00:00.000Z",
-      "fileSize": "440.65 MB"
-    },
-    {
-      "title": "DGU (2015) PC | RePack",
-      "uris": [
-        "magnet:?xt=urn:btih:4288c86831d39fbca4241aa60ab5a17b252e7fa6&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
-      ],
-      "uploadDate": "2015-07-16T00:00:00.000Z",
-      "fileSize": "3.59 GB"
     },
     {
       "title": "FlatOut 2: Reborn (2015) PC",
@@ -87424,6 +87384,22 @@
       ],
       "uploadDate": "2019-01-03T00:00:00.000Z",
       "fileSize": "29.17 GB"
+    },
+    {
+      "title": "Cradle (2015) PC | RePack от XLASER",
+      "uris": [
+        "magnet:?xt=urn:btih:e8fa92ed3df9b7b613d4b0b4055b426bf78ad5ef&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
+      ],
+      "uploadDate": "2015-07-29T00:00:00.000Z",
+      "fileSize": "1.53 GB"
+    },
+    {
+      "title": "Never Alone - Foxtales (2015) PC | RePack от XLASER",
+      "uris": [
+        "magnet:?xt=urn:btih:8d086229d131e4ff55c9750ccbcb41bf3d7cbaa9&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
+      ],
+      "uploadDate": "2015-07-30T00:00:00.000Z",
+      "fileSize": "1.71 GB"
     },
     {
       "title": "Наследие ведьм 3: Охотник и добыча / Witches Legacy 3: Hunter and the Hunted CE (2015) РС",
@@ -88570,46 +88546,6 @@
       "fileSize": "8.64 GB"
     },
     {
-      "title": "Arx Fatalis (2002) PC | RePack от SpaceX",
-      "uris": [
-        "magnet:?xt=urn:btih:dc4e8ce1d5eca1ebe04c1a4584f65d20eac36229&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
-      ],
-      "uploadDate": "2015-09-19T00:00:00.000Z",
-      "fileSize": "333.37 MB"
-    },
-    {
-      "title": "Train Simulator 2016 Steam Edition (2015) PC | RePack от R.G. Liberty",
-      "uris": [
-        "magnet:?xt=urn:btih:2cdf88bf5ca53792ccad2db9296372929d347966&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
-      ],
-      "uploadDate": "2015-09-19T00:00:00.000Z",
-      "fileSize": "4.09 GB"
-    },
-    {
-      "title": "Amnesia: The Dark Descent + Penumbra: Квадрология (2014) PC | RePack",
-      "uris": [
-        "magnet:?xt=urn:btih:047ff8f5fe0c1816c7862409204e5f1a52cc6b72&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
-      ],
-      "uploadDate": "2015-09-19T00:00:00.000Z",
-      "fileSize": "2.42 GB"
-    },
-    {
-      "title": "SoftwareINC [v.5.4] (2015) PC",
-      "uris": [
-        "magnet:?xt=urn:btih:73226631296d0fec5c97ef71bd77e5cb0744506a&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
-      ],
-      "uploadDate": "2015-09-19T00:00:00.000Z",
-      "fileSize": "204.88 MB"
-    },
-    {
-      "title": "Чернокнижник: Проклятье шамана (2015) PC",
-      "uris": [
-        "magnet:?xt=urn:btih:3a1cf5540dce791c14c92adfc200c8743e10eae7&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
-      ],
-      "uploadDate": "2015-09-20T00:00:00.000Z",
-      "fileSize": "309.45 MB"
-    },
-    {
       "title": "BRAWL (2015) PC | Лицензия",
       "uris": [
         "magnet:?xt=urn:btih:dcfbf1ad63a5763be67dee379ba1a8afa40f60fd&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
@@ -89184,6 +89120,38 @@
       ],
       "uploadDate": "2015-10-13T00:00:00.000Z",
       "fileSize": "630.10 MB"
+    },
+    {
+      "title": "Colonial Conquest [v.1.151005] (2015) PC | RePack",
+      "uris": [
+        "magnet:?xt=urn:btih:efd1f147e5236524a1688a96c0a3586248b7cbcd&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
+      ],
+      "uploadDate": "2015-10-13T00:00:00.000Z",
+      "fileSize": "214.59 MB"
+    },
+    {
+      "title": "Wasteland 2: Director's Cut (2015) PC | Лицензия",
+      "uris": [
+        "magnet:?xt=urn:btih:c903fc739a0b7dcacabc75b2e807f184e2fb0752&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
+      ],
+      "uploadDate": "2015-10-13T00:00:00.000Z",
+      "fileSize": "11.20 GB"
+    },
+    {
+      "title": "Forced: Slightly Better Edition (2013) PC | Лицензия",
+      "uris": [
+        "magnet:?xt=urn:btih:04e0a97ce4a5cae05e6f0d39f31194c1b7460bd0&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
+      ],
+      "uploadDate": "2015-10-13T00:00:00.000Z",
+      "fileSize": "2.13 GB"
+    },
+    {
+      "title": "Forced: Slightly Better Edition (2013) PC | RePack от R.G. Механики",
+      "uris": [
+        "magnet:?xt=urn:btih:4623a99f0b70d454b87f861614277b6fe2c4e4b0&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
+      ],
+      "uploadDate": "2015-10-13T00:00:00.000Z",
+      "fileSize": "954.79 MB"
     },
     {
       "title": "BloodRayne Betrayal (2014) PC | RePack от R.G. Механики",
@@ -94274,46 +94242,6 @@
       "fileSize": "915.61 MB"
     },
     {
-      "title": "Мор. Утопия / Pathologic Classic HD [v 1.03] (2015) PC | RePack",
-      "uris": [
-        "magnet:?xt=urn:btih:afbc970c7deaac09e0c919b03d012589cce39d00&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
-      ],
-      "uploadDate": "2016-05-12T00:00:00.000Z",
-      "fileSize": "1.16 GB"
-    },
-    {
-      "title": "Residue: Final Cut (2014) PC | Лицензия",
-      "uris": [
-        "magnet:?xt=urn:btih:d20afad535f4e31c3e2f228fca15049618d43ce1&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
-      ],
-      "uploadDate": "2016-05-12T00:00:00.000Z",
-      "fileSize": "841.20 MB"
-    },
-    {
-      "title": "The Expendables 2 Videogame (2012) PC | Repack от =nemos=",
-      "uris": [
-        "magnet:?xt=urn:btih:05ff250b7c496798c0090c0c37a54cd4d2f5ba4a&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
-      ],
-      "uploadDate": "2016-05-14T00:00:00.000Z",
-      "fileSize": "1.12 GB"
-    },
-    {
-      "title": "Project CARS: Game of the Year Edition (2015) PC | RePack от R.G. Catalyst",
-      "uris": [
-        "magnet:?xt=urn:btih:6bf0f917c6f4bffcba3b306497503926f9a4d827&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
-      ],
-      "uploadDate": "2016-05-14T00:00:00.000Z",
-      "fileSize": "15.26 GB"
-    },
-    {
-      "title": "Gas Guzzlers: Dilogy (2012-2013) PC | RePack от R.G. Механики",
-      "uris": [
-        "magnet:?xt=urn:btih:6ed895ada5156d6e01c0ea4c54880196a040ff1c&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
-      ],
-      "uploadDate": "2016-05-14T00:00:00.000Z",
-      "fileSize": "8.35 GB"
-    },
-    {
       "title": "Riff Racer - Race Your Music (2016) PC | Repack",
       "uris": [
         "magnet:?xt=urn:btih:f5559a6caeeb9a5e126061540954298b4fc366cd&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
@@ -94930,12 +94858,44 @@
       "fileSize": "783.24 MB"
     },
     {
+      "title": "Dead Island - Definitive Edition (2016) PC | Repack от =nemos=",
+      "uris": [
+        "magnet:?xt=urn:btih:8d75211d485f064d5bf68e9cc9946b2e459500ec&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
+      ],
+      "uploadDate": "2016-06-02T00:00:00.000Z",
+      "fileSize": "5.75 GB"
+    },
+    {
+      "title": "Hero Defense - Haunted Island (2016) PC | Лицензия",
+      "uris": [
+        "magnet:?xt=urn:btih:256eafb13f3f556db57129b39973816ae16b6bdd&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
+      ],
+      "uploadDate": "2016-06-02T00:00:00.000Z",
+      "fileSize": "552.07 MB"
+    },
+    {
       "title": "MTB Downhill Simulator (2016) PC | Лицензия",
       "uris": [
         "magnet:?xt=urn:btih:db9784de47b3b4886ebf4b826205ad65b1811ecc&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
       ],
       "uploadDate": "2016-06-02T00:00:00.000Z",
       "fileSize": "801.90 MB"
+    },
+    {
+      "title": "Химеры 3: Прокляты и забыты / Chimeras 3: Cursed And Forgotten CE (2015) PC",
+      "uris": [
+        "magnet:?xt=urn:btih:fe3b1f4525b94f1803440d27fc9ed61649c2a5b3&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
+      ],
+      "uploadDate": "2016-06-03T00:00:00.000Z",
+      "fileSize": "737.37 MB"
+    },
+    {
+      "title": "The Incredible Adventures of Van Helsing Final Cut [v 1.0.8] (2015) PC | RePack от =nemos=",
+      "uris": [
+        "magnet:?xt=urn:btih:eebe89b220cc5cc04c0a9627c470c99ee2b0da7d&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
+      ],
+      "uploadDate": "2016-06-04T00:00:00.000Z",
+      "fileSize": "12.76 GB"
     },
     {
       "title": "Lost Sector [104a] (2014) PC | Online-only",
@@ -97986,54 +97946,6 @@
       "fileSize": "3.62 GB"
     },
     {
-      "title": "One Piece: Burning Blood (2016) PC | Лицензия",
-      "uris": [
-        "magnet:?xt=urn:btih:dea6261237b0c0ea16aa20cbdddcd18de2caee72&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
-      ],
-      "uploadDate": "2016-09-02T00:00:00.000Z",
-      "fileSize": "9.44 GB"
-    },
-    {
-      "title": "RunGunJumpGun (2016) PC | RePack от MasterDarkness",
-      "uris": [
-        "magnet:?xt=urn:btih:de0312afab82a70ba90f21b6dc2a29eea2230a3c&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
-      ],
-      "uploadDate": "2016-09-02T00:00:00.000Z",
-      "fileSize": "111.53 MB"
-    },
-    {
-      "title": "Мрачные легенды 3: Темный город. Коллекционное Издание (2016) PC",
-      "uris": [
-        "magnet:?xt=urn:btih:e0eb17ff92f0ed1bd22d88ca2e452c486deb6b21&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
-      ],
-      "uploadDate": "2016-09-02T00:00:00.000Z",
-      "fileSize": "858.59 MB"
-    },
-    {
-      "title": "The Banner Saga [v 2.32.04] (2014) РС | Лицензия",
-      "uris": [
-        "magnet:?xt=urn:btih:89c340c5e224d9eb6bae954ea86b96fe830208b9&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
-      ],
-      "uploadDate": "2016-09-02T00:00:00.000Z",
-      "fileSize": "4.37 GB"
-    },
-    {
-      "title": "Tempest [v.1.0.3] (2016) PC | Steam-Rip от Let'sPlay",
-      "uris": [
-        "magnet:?xt=urn:btih:021248f72d3c365d44722e4942579e5f1254d279&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
-      ],
-      "uploadDate": "2016-09-02T00:00:00.000Z",
-      "fileSize": "144.25 MB"
-    },
-    {
-      "title": "Reigns: Collector's Edition [v.1.23] (2016) PC | Steam-Rip от Let'sРlay",
-      "uris": [
-        "magnet:?xt=urn:btih:a4f32da094809fdc6be0d48e383b677dc2d3f49b&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
-      ],
-      "uploadDate": "2016-09-02T00:00:00.000Z",
-      "fileSize": "146.21 MB"
-    },
-    {
       "title": "One Piece: Burning Blood (2016) PC | RePack от FitGirl",
       "uris": [
         "magnet:?xt=urn:btih:6c402f23932052889612ac11f7ecf173247d1d52&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
@@ -98736,6 +98648,30 @@
       ],
       "uploadDate": "2016-09-18T00:00:00.000Z",
       "fileSize": "593.65 MB"
+    },
+    {
+      "title": "Necropolis: Brutal Edition [v.1.1.1] (2016) PC | RePack от Other's",
+      "uris": [
+        "magnet:?xt=urn:btih:7ba5e59760a53c03b6c5f8803d5167b2e02d0e7a&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
+      ],
+      "uploadDate": "2016-09-18T00:00:00.000Z",
+      "fileSize": "812.95 MB"
+    },
+    {
+      "title": "Painkiller: Hell & Damnation - Collector's Edition (2012) PC | Steam-Rip от Juk.v.Muravenike",
+      "uris": [
+        "magnet:?xt=urn:btih:f2dbd69d808091986fa899cc8fc9166bdf49937f&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
+      ],
+      "uploadDate": "2016-09-18T00:00:00.000Z",
+      "fileSize": "14.32 GB"
+    },
+    {
+      "title": "Worms W.M.D [v.1.2] (2016) PC | RePack от GAMER",
+      "uris": [
+        "magnet:?xt=urn:btih:1c6717cfddcd3c370bc5769f1298ab08d7eb4037&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
+      ],
+      "uploadDate": "2016-09-18T00:00:00.000Z",
+      "fileSize": "1.32 GB"
     },
     {
       "title": "Train Simulator 2017 Pioneers Edition [58.3a] (2016) PC | Repack от Other s",
@@ -114530,6 +114466,14 @@
       "fileSize": "0.99 GB"
     },
     {
+      "title": "Final Fantasy XV Windows Edition [Build 1261414 + DLCs] (2018) PC | Лицензия",
+      "uris": [
+        "magnet:?xt=urn:btih:cb96f9289f40e9bc3b28c70d1bb4d949ad1bae94&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
+      ],
+      "uploadDate": "2019-10-02T00:00:00.000Z",
+      "fileSize": "96.19 GB"
+    },
+    {
       "title": "Guns, Gore & Cannoli 2 (2018) PC | RePack от Pioneer",
       "uris": [
         "magnet:?xt=urn:btih:a6149964110d552418b7a4eb58c159c8a0cfa6a5&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
@@ -115170,6 +115114,14 @@
       "fileSize": "148.33 MB"
     },
     {
+      "title": "Enoch: Underground (2018) PC | RePack от SpaceX",
+      "uris": [
+        "magnet:?xt=urn:btih:e0638a6a1db443d79857fe9404b9054db3b46564&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
+      ],
+      "uploadDate": "2018-03-22T00:00:00.000Z",
+      "fileSize": "3.29 GB"
+    },
+    {
       "title": "Enoch: Underground (2018) PC | RePack от xatab",
       "uris": [
         "magnet:?xt=urn:btih:ff5b4f7f216c01b5a09fef3a60877e15ef197432&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
@@ -115202,14 +115154,6 @@
       "fileSize": "0.98 GB"
     },
     {
-      "title": "Video Strip Poker Classic 2007 (2007) PC",
-      "uris": [
-        "magnet:?xt=urn:btih:c35fb6beda9d45e3734673cae1bbe50398532b0f&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
-      ],
-      "uploadDate": "2018-03-23T00:00:00.000Z",
-      "fileSize": "8.11 GB"
-    },
-    {
       "title": "Ash of Gods: Redemption [v 1.4.24] (2018) PC | RePack от qoob",
       "uris": [
         "magnet:?xt=urn:btih:ad86ec88ac54e007d4ccf3bb7603875985e8c1f8&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
@@ -115232,14 +115176,6 @@
       ],
       "uploadDate": "2018-08-07T00:00:00.000Z",
       "fileSize": "5.75 GB"
-    },
-    {
-      "title": "The Raven Remastered: Digital Deluxe Edition (2018) PC | RePack от FitGirl",
-      "uris": [
-        "magnet:?xt=urn:btih:f3782d2c870a6588ba2295818ced3ec509a23f53&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
-      ],
-      "uploadDate": "2018-03-23T00:00:00.000Z",
-      "fileSize": "7.32 GB"
     },
     {
       "title": "Ni no Kuni II: Revenant Kingdom - The Prince's Edition [v 3.00 + DLCs] (2018) PC | Лицензия",
@@ -115272,38 +115208,6 @@
       ],
       "uploadDate": "2018-05-21T00:00:00.000Z",
       "fileSize": "14.45 GB"
-    },
-    {
-      "title": "Безумные мечты (2004) PC",
-      "uris": [
-        "magnet:?xt=urn:btih:f712e6552379e1f2c004ef5f5c6d14188e8844dd&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
-      ],
-      "uploadDate": "2018-03-24T00:00:00.000Z",
-      "fileSize": "1.47 GB"
-    },
-    {
-      "title": "Strip Poker (2004) PC",
-      "uris": [
-        "magnet:?xt=urn:btih:cdd848f93e2cffd0384cb381fe91ac6a9a41ebdd&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
-      ],
-      "uploadDate": "2018-03-25T00:00:00.000Z",
-      "fileSize": "675.37 MB"
-    },
-    {
-      "title": "Finding Paradise (2017) PC | Лицензия",
-      "uris": [
-        "magnet:?xt=urn:btih:fc6e81f1e16d47dfc884c9998d87581db34e63ae&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
-      ],
-      "uploadDate": "2018-03-25T00:00:00.000Z",
-      "fileSize": "695.66 MB"
-    },
-    {
-      "title": "Call of Duty: Black Ops 2 (2012) PC | RePack от Canek77",
-      "uris": [
-        "magnet:?xt=urn:btih:c128e719cc9b5e76b34d6111064a87401de829d5&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
-      ],
-      "uploadDate": "2018-03-25T00:00:00.000Z",
-      "fileSize": "24.30 GB"
     },
     {
       "title": "Enoch: Underground (2018) PC | RePack от Other s",
@@ -118690,6 +118594,14 @@
       "fileSize": "640.87 MB"
     },
     {
+      "title": "Road Redemption [v 20181003 + DLCs] (2017) PC | RePack от R.G. Catalyst",
+      "uris": [
+        "magnet:?xt=urn:btih:edf22d76c1b668204f731d1f3fd7059bfd628830&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
+      ],
+      "uploadDate": "2018-10-30T00:00:00.000Z",
+      "fileSize": "1.83 GB"
+    },
+    {
       "title": "Planet of the Apes: Last Frontier (2018) PC | Лицензия",
       "uris": [
         "magnet:?xt=urn:btih:a7aef42348724d7ef252cfcbed18164c136b450b&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
@@ -119722,14 +119634,6 @@
       "fileSize": "10.73 GB"
     },
     {
-      "title": "Castlevania - Lords of Shadow 2 [v 1.0.0.1u1 + 4 DLC] (2014) PC | RePack от qoob",
-      "uris": [
-        "magnet:?xt=urn:btih:eed30c3a396d183f7938b49249fa5dfb9abc4f47&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
-      ],
-      "uploadDate": "2018-10-31T00:00:00.000Z",
-      "fileSize": "4.64 GB"
-    },
-    {
       "title": "Dungeons 3 [v 1.5.3 + 8 DLC] (2017) PC | RePack от R.G. Catalyst",
       "uris": [
         "magnet:?xt=urn:btih:b7923ac127e655b8a76a1d12be6c890649485e5e&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
@@ -120250,14 +120154,6 @@
       "fileSize": "6.00 GB"
     },
     {
-      "title": "Party Hard 2 [v 1.0.012r] (2018) PC | RePack от qoob",
-      "uris": [
-        "magnet:?xt=urn:btih:817f8b0e1e79591a060a06d3d04932ae7dec8f6c&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
-      ],
-      "uploadDate": "2018-11-01T00:00:00.000Z",
-      "fileSize": "1.47 GB"
-    },
-    {
       "title": "Circle Empires [v 1.2.1 + DLC] (2018) PC | RePack от qoob",
       "uris": [
         "magnet:?xt=urn:btih:3d5eab9fb6c674c6973cb495bdc26bc02ee7daf8&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
@@ -120456,38 +120352,6 @@
       ],
       "uploadDate": "2019-01-16T00:00:00.000Z",
       "fileSize": "5.28 GB"
-    },
-    {
-      "title": "Meow Motors (2018) PC | RePack от qoob",
-      "uris": [
-        "magnet:?xt=urn:btih:ecb493ac1067f29f641f8b522fe8bcb764773b43&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
-      ],
-      "uploadDate": "2018-11-02T00:00:00.000Z",
-      "fileSize": "2.86 GB"
-    },
-    {
-      "title": "My Memory of Us [v 1.2990] (2018) PC | Repack от R.G. Freedom",
-      "uris": [
-        "magnet:?xt=urn:btih:d28b04f866b6874185169e25744dd04bca7e8682&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
-      ],
-      "uploadDate": "2018-11-02T00:00:00.000Z",
-      "fileSize": "2.10 GB"
-    },
-    {
-      "title": "Train Sim World: Digital Deluxe Edition [v 1.0 + DLCs] (2018) PC | RePack от R.G. Catalyst",
-      "uris": [
-        "magnet:?xt=urn:btih:94bcd4e93d4e070558678262bb94316a7f2a2756&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
-      ],
-      "uploadDate": "2018-11-02T00:00:00.000Z",
-      "fileSize": "8.29 GB"
-    },
-    {
-      "title": "My Memory of Us [v 1.2990] (2018) PC | Лицензия",
-      "uris": [
-        "magnet:?xt=urn:btih:cd846d1be479c89d13ba14f4b3b8fb92a0cbe609&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
-      ],
-      "uploadDate": "2018-11-03T00:00:00.000Z",
-      "fileSize": "4.75 GB"
     },
     {
       "title": "Firewatch [v 1.09] (2016) PC | RePack от R.G. Catalyst",
@@ -124626,14 +124490,6 @@
       "fileSize": "7.01 GB"
     },
     {
-      "title": "Ken Follett's The Pillars of the Earth: Book 1-3 [v 1.1.703] (2017) PC | RePack от xatab",
-      "uris": [
-        "magnet:?xt=urn:btih:3e5e4a9c5fe21a9b5cc30e85cff38d5139be77ca&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
-      ],
-      "uploadDate": "2019-04-21T00:00:00.000Z",
-      "fileSize": "11.06 GB"
-    },
-    {
       "title": "Эмулятор Android'а и Java на PC (2019) PC",
       "uris": [
         "magnet:?xt=urn:btih:3d52d7833bab3b12d59b96a23ca5b1d9d67d9a8e&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
@@ -126530,14 +126386,6 @@
       "fileSize": "1.11 GB"
     },
     {
-      "title": "Total War: Three Kingdoms - Collection [v 1.7.1 + DLCs] (2019) PC | Repack от dixen18",
-      "uris": [
-        "magnet:?xt=urn:btih:1d718ff4e6ff762dfdce46fb175ab80f98a135e6&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
-      ],
-      "uploadDate": "2025-10-17T00:00:00.000Z",
-      "fileSize": "20.64 GB"
-    },
-    {
       "title": "Dungeon Of Dragon Knight (2019) PC | Лицензия",
       "uris": [
         "magnet:?xt=urn:btih:260b0626bcba692abe303e6dc4d5b8caad4c42ba&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
@@ -128416,6 +128264,30 @@
       ],
       "uploadDate": "2019-10-02T00:00:00.000Z",
       "fileSize": "555.42 MB"
+    },
+    {
+      "title": "Полуночный зов 3: Валерия / Midnight Calling 3: Valeria (2017) PC",
+      "uris": [
+        "magnet:?xt=urn:btih:4892bc1ef2be38c0a5c9632f4d208536f9623e0b&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
+      ],
+      "uploadDate": "2019-10-02T00:00:00.000Z",
+      "fileSize": "780.12 MB"
+    },
+    {
+      "title": "Полуночный зов 4: Мудрый дракон / Midnight Calling 4: The Wise Dragon (2017) PC",
+      "uris": [
+        "magnet:?xt=urn:btih:e9b86b813b2d0e57f3214f9ca6cea37aa3106a5e&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
+      ],
+      "uploadDate": "2019-10-02T00:00:00.000Z",
+      "fileSize": "732.43 MB"
+    },
+    {
+      "title": "Полуночный зов 5: Арабелла / Midnight Calling 5: Arabella (2018) PC",
+      "uris": [
+        "magnet:?xt=urn:btih:3df79456c6056cfc87ec65ff31357646a8b57579&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
+      ],
+      "uploadDate": "2019-10-02T00:00:00.000Z",
+      "fileSize": "746.07 MB"
     },
     {
       "title": "The Long Return (2019) PC | RePack от SpaceX",
@@ -130778,12 +130650,52 @@
       "fileSize": "18.73 GB"
     },
     {
+      "title": "Genesis Alpha One: Deluxe Edition [+ DLC] (2019) PC | RePack от FitGirl",
+      "uris": [
+        "magnet:?xt=urn:btih:90449c891045b13989fb4507d0782cbe10e0e49a&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
+      ],
+      "uploadDate": "2020-02-26T00:00:00.000Z",
+      "fileSize": "4.13 GB"
+    },
+    {
+      "title": "Genesis Alpha One: Deluxe Edition [v 2.0 + DLC] (2019) PC | RePack от SpaceX",
+      "uris": [
+        "magnet:?xt=urn:btih:bddc6d0b29e88d20ade84da7be40f36110967d86&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
+      ],
+      "uploadDate": "2020-02-26T00:00:00.000Z",
+      "fileSize": "4.49 GB"
+    },
+    {
+      "title": "Beautiful Desolation (2020) PC | RePack от SpaceX",
+      "uris": [
+        "magnet:?xt=urn:btih:a7605bd482cf2929d481ec8b53d0c21bc8de4886&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
+      ],
+      "uploadDate": "2020-02-26T00:00:00.000Z",
+      "fileSize": "5.99 GB"
+    },
+    {
       "title": "Dishonored: Complete Collection (2012-2017) PC | Repack от xatab",
       "uris": [
         "magnet:?xt=urn:btih:b10add7d0ebf868d0281b263f574c82dffee04f8&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
       ],
       "uploadDate": "2023-12-27T00:00:00.000Z",
       "fileSize": "43.14 GB"
+    },
+    {
+      "title": "Corruption 2029 [v 1.02] (2020) PC | RePack от SpaceX",
+      "uris": [
+        "magnet:?xt=urn:btih:b65af6073ed6a96a38c33469108cd5270295cf2a&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
+      ],
+      "uploadDate": "2020-02-27T00:00:00.000Z",
+      "fileSize": "2.79 GB"
+    },
+    {
+      "title": "Dead or Alive 6 [v 1.20 + DLCs] (2019) PC | RePack от FitGirl",
+      "uris": [
+        "magnet:?xt=urn:btih:7a3ca1d85bbfca887759de96bf52eb71f22e61ac&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
+      ],
+      "uploadDate": "2020-02-27T00:00:00.000Z",
+      "fileSize": "17.01 GB"
     },
     {
       "title": "MX Nitro: Unleashed [v 1.0 + DLC] (2017) PC | RePack от SpaceX",
@@ -139770,14 +139682,6 @@
       "fileSize": "2.11 GB"
     },
     {
-      "title": "Port Royale 4: Extended Edition [v 1.5.0.19260 + DLC] (2020) PC | Repack от R.G. Freedom",
-      "uris": [
-        "magnet:?xt=urn:btih:8030a21a4788bc98fbb5b29d0ed366e614df4452&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
-      ],
-      "uploadDate": "2021-02-13T00:00:00.000Z",
-      "fileSize": "6.18 GB"
-    },
-    {
       "title": "For The King [v 1.1.00.11259 + DLC] (2018) PC | RePack от SpaceX",
       "uris": [
         "magnet:?xt=urn:btih:8e4aee5e154836409beeefcfa93a600d7405856a&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
@@ -139856,38 +139760,6 @@
       ],
       "uploadDate": "2021-02-12T00:00:00.000Z",
       "fileSize": "508.23 MB"
-    },
-    {
-      "title": "Loco Parentis [v1.3.0.5066] (2019) PC | RePack от Pioneer",
-      "uris": [
-        "magnet:?xt=urn:btih:da7334b94dcb59764187cb4de32475f366fb2413&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
-      ],
-      "uploadDate": "2021-02-12T00:00:00.000Z",
-      "fileSize": "1.78 GB"
-    },
-    {
-      "title": "The Room 4: Old Sins (2021) PC | RePack от R.G. Freedom",
-      "uris": [
-        "magnet:?xt=urn:btih:a2158a176acbab3634e1373c2486cadbb9ec4411&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
-      ],
-      "uploadDate": "2021-02-12T00:00:00.000Z",
-      "fileSize": "1.75 GB"
-    },
-    {
-      "title": "Under Lock [v1.2a | Early Access] (2021) PC | RePack от Pioneer",
-      "uris": [
-        "magnet:?xt=urn:btih:6b35f02304d7f7c297c45f813fad110f7e26ee28&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
-      ],
-      "uploadDate": "2021-02-13T00:00:00.000Z",
-      "fileSize": "2.66 GB"
-    },
-    {
-      "title": "Космическая колония / Space Colony (2003) PC | RePack от Yaroslav98",
-      "uris": [
-        "magnet:?xt=urn:btih:9be9f5fc7e53c79af8670779a7bc436cbea8af38&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
-      ],
-      "uploadDate": "2021-02-13T00:00:00.000Z",
-      "fileSize": "753.89 MB"
     },
     {
       "title": "Killer Inside Us [v 1.07] (2020) PC | RePack от Pioneer | Multiplayer-only",
@@ -140488,6 +140360,38 @@
       ],
       "uploadDate": "2023-11-30T00:00:00.000Z",
       "fileSize": "94.95 GB"
+    },
+    {
+      "title": "Dead Age 2 [v 1.67 | Early Access] (2020) PC | Лицензия",
+      "uris": [
+        "magnet:?xt=urn:btih:6e7c3e1db672f786639bb996dfd3fcbbb46b1967&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
+      ],
+      "uploadDate": "2021-03-11T00:00:00.000Z",
+      "fileSize": "6.11 GB"
+    },
+    {
+      "title": "The Legend of Zelda: Link's Awakening [v 1.0.1 + Yuzu Emu для PC + Моды] (2019) PC | RePack от FitGirl",
+      "uris": [
+        "magnet:?xt=urn:btih:cf7b3ea12e8c3f9899da6baa88071a07619e58e4&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
+      ],
+      "uploadDate": "2021-03-11T00:00:00.000Z",
+      "fileSize": "1.37 GB"
+    },
+    {
+      "title": "Destroy All Humans! [v 1.0.2550 + DLC] (2020) PC | RePack от R.G. Freedom",
+      "uris": [
+        "magnet:?xt=urn:btih:c6f491d864f03f7d35e0bec0d4961872cfb3688b&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
+      ],
+      "uploadDate": "2021-03-11T00:00:00.000Z",
+      "fileSize": "10.26 GB"
+    },
+    {
+      "title": "Forza Horizon 4: Ultimate Edition [v 1.465.282.0 + DLCs] (2018) PC | RePack от FitGirl",
+      "uris": [
+        "magnet:?xt=urn:btih:99f0a053dbe27e8b560b3b9c93f232aba5c9c8a3&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
+      ],
+      "uploadDate": "2021-03-11T00:00:00.000Z",
+      "fileSize": "52.62 GB"
     },
     {
       "title": "The Legend of Zelda: Breath of the Wild [v 1.5.0 + DLCs + Cemu] (2017) PC | RePack от FitGirl",
@@ -160554,20 +160458,20 @@
       "fileSize": "2.89 GB"
     },
     {
-      "title": "Half-Life: Alyx [v 1.5.4 + DLC + NoVR-Launcher 4.2.4] (2020) PC | RePack от FitGirl",
-      "uris": [
-        "magnet:?xt=urn:btih:2ae93745071c5294900404b53771d5cfe3f8c643&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
-      ],
-      "uploadDate": "2026-03-04T00:00:00.000Z",
-      "fileSize": "37.96 GB"
-    },
-    {
       "title": "House Flipper [v 1.23103 (a5122) + DLCs] (2021) PC | RePack от селезень",
       "uris": [
         "magnet:?xt=urn:btih:86eb8575faa07a3d4416a2b1170bd49f2d022522&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
       ],
       "uploadDate": "2023-04-14T00:00:00.000Z",
       "fileSize": "7.05 GB"
+    },
+    {
+      "title": "Wartales: The Mercenaries Edition [v 1.0.40128 + DLCs] (2023) PC | RePack от Wanterlude",
+      "uris": [
+        "magnet:?xt=urn:btih:f0de308ecb8b0010ecd22f4b3e5054554a7e832a&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
+      ],
+      "uploadDate": "2025-03-29T00:00:00.000Z",
+      "fileSize": "8.97 GB"
     },
     {
       "title": "Sid Meier's Civilization VI: Anthology [v 1.0.12.68 + DLCs] (2016) PC | RePack от Wanterlude",
@@ -160592,6 +160496,14 @@
       ],
       "uploadDate": "2023-06-02T00:00:00.000Z",
       "fileSize": "69.30 GB"
+    },
+    {
+      "title": "Medieval Dynasty [v 2.3.1.1 + DLC] (2021) PC | RePack от Wanterlude",
+      "uris": [
+        "magnet:?xt=urn:btih:9afda7d931cd524d132e36c84b568005a2deccb5&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
+      ],
+      "uploadDate": "2025-03-29T00:00:00.000Z",
+      "fileSize": "11.40 GB"
     },
     {
       "title": "X4: Foundations - Community of Planets Edition [v 7.10 + DLCs] (2018) PC | RePack от Wanterlude",
@@ -163120,6 +163032,14 @@
       ],
       "uploadDate": "2023-07-04T00:00:00.000Z",
       "fileSize": "167.42 MB"
+    },
+    {
+      "title": "Gas Station Simulator [v 1.0.2.31637s + DLCs] (2021) PC | RePack от Wanterlude",
+      "uris": [
+        "magnet:?xt=urn:btih:9261dc0c628d452f1ddf98ac8b97906e2c3536ad&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
+      ],
+      "uploadDate": "2025-03-29T00:00:00.000Z",
+      "fileSize": "8.19 GB"
     },
     {
       "title": "Aquarium Designer [Build 11514444 + DLCs] (2021) PC | RePack от FitGirl",
@@ -176538,14 +176458,6 @@
       "fileSize": "7.88 GB"
     },
     {
-      "title": "Police Simulator: Patrol Officers - Ultimate Duty Edition [v 22.2.2-rc2+rel.571-404150 + DLCs] (2022) PC | Repack от FitGirl",
-      "uris": [
-        "magnet:?xt=urn:btih:96a2c3363f03fd0fad592ffb42999f3cffec0abb&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
-      ],
-      "uploadDate": "2026-03-05T00:00:00.000Z",
-      "fileSize": "3.36 GB"
-    },
-    {
       "title": "The Black Pool [v 1.0 + DLCs] (2024) PC | RePack от FitGirl",
       "uris": [
         "magnet:?xt=urn:btih:b829e9d30722bbdd5b2490214b8498012f929356&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
@@ -180544,6 +180456,14 @@
       ],
       "uploadDate": "2024-10-31T00:00:00.000Z",
       "fileSize": "24.79 GB"
+    },
+    {
+      "title": "The Axis Unseen [v 1.092] (2024) PC | RePack от Wanterlude",
+      "uris": [
+        "magnet:?xt=urn:btih:6ef230fe32dbf7c54f3996b9d832866c75acd214&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
+      ],
+      "uploadDate": "2025-03-29T00:00:00.000Z",
+      "fileSize": "19.42 GB"
     },
     {
       "title": "Moon Mystery (2024) PC | RePack от FitGirl",
@@ -185034,6 +184954,14 @@
       "fileSize": "7.34 GB"
     },
     {
+      "title": "INAYAH - Life after Gods (2025) PC | RePack от селезень",
+      "uris": [
+        "magnet:?xt=urn:btih:d0b02999ea5fbc44b7498dac02ba9572467516ad&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
+      ],
+      "uploadDate": "2025-03-29T00:00:00.000Z",
+      "fileSize": "3.62 GB"
+    },
+    {
       "title": "Русы против ящеров 2 / Lizards Must Die 2: Deluxe Pack [Build 20619534 + DLCs] (2025) PC | RePack от FitGirl",
       "uris": [
         "magnet:?xt=urn:btih:8330842605066cbe41ce779abbafe24c1ac0a3a4&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
@@ -186410,12 +186338,52 @@
       "fileSize": "1.19 GB"
     },
     {
+      "title": "Battlefield 1942 + Mods (2002) PC | RePack от Canek77",
+      "uris": [
+        "magnet:?xt=urn:btih:d06265c66fdcd1433a25de116ba9355445257393&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
+      ],
+      "uploadDate": "2025-05-05T00:00:00.000Z",
+      "fileSize": "2.67 GB"
+    },
+    {
       "title": "Onimusha: Warlords [Build 17777991] (2019) PC | RePack от FitGirl",
       "uris": [
         "magnet:?xt=urn:btih:2bd5ff0ae949fda7e5667cd15b4a326de02c34b7&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
       ],
       "uploadDate": "2025-05-05T00:00:00.000Z",
       "fileSize": "8.54 GB"
+    },
+    {
+      "title": "Сайлент Хилл 4: Комната / Silent Hill 4: The Room - New Edition [1.0] (2004) PC | Пиратка",
+      "uris": [
+        "magnet:?xt=urn:btih:f095b09a4caa88ccdf38e9e511b3f69ec3e40164&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
+      ],
+      "uploadDate": "2025-05-05T00:00:00.000Z",
+      "fileSize": "2.56 GB"
+    },
+    {
+      "title": "Backrooms: Escape Together [v 0.11.5.1 | Early Access] (2022) PC | Portable от Pioneer",
+      "uris": [
+        "magnet:?xt=urn:btih:7bfac7b61b24e66074bc5d31abc25e28236d00a1&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
+      ],
+      "uploadDate": "2025-05-05T00:00:00.000Z",
+      "fileSize": "9.66 GB"
+    },
+    {
+      "title": "Ratopia [v 1.0.0500 + DLC] (2025) PC | RePack от FitGirl",
+      "uris": [
+        "magnet:?xt=urn:btih:149a7c43420b1c0c27c95ec4d9aab6cdf910d773&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
+      ],
+      "uploadDate": "2025-05-05T00:00:00.000Z",
+      "fileSize": "527.41 MB"
+    },
+    {
+      "title": "Another Crab's Treasure: Deluxe Edition [v 2.0.000.3 + DLC] (2024) PC | RePack от FitGirl",
+      "uris": [
+        "magnet:?xt=urn:btih:c55e9051801c8a5cdd171f92cb1a39885b9da916&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
+      ],
+      "uploadDate": "2025-05-05T00:00:00.000Z",
+      "fileSize": "2.21 GB"
     },
     {
       "title": "Mirror of Heaven [v 1.41 + DLC] (2024) PC | RePack от FitGirl",
@@ -191642,38 +191610,6 @@
       "fileSize": "1.93 GB"
     },
     {
-      "title": "Trials Rising: Gold Edition [Build 10831717 + DLCs] (2019) PC | RePack от Wanterlude",
-      "uris": [
-        "magnet:?xt=urn:btih:a6fe9a1b593922a50be2bf641a5b3df8726371b1&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
-      ],
-      "uploadDate": "2025-10-16T00:00:00.000Z",
-      "fileSize": "17.72 GB"
-    },
-    {
-      "title": "Lords of Ravage [v 1.0-1-26] (2025) PC | RePack от FitGirl",
-      "uris": [
-        "magnet:?xt=urn:btih:13815ff536598ca07f92e6efd46ff7248d01fb12&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
-      ],
-      "uploadDate": "2025-10-16T00:00:00.000Z",
-      "fileSize": "1.05 GB"
-    },
-    {
-      "title": "Cooking Simulator [v 7.0.0 + DLCs] (2019) PC | RePack от селезень",
-      "uris": [
-        "magnet:?xt=urn:btih:e74aa4e03e01c59156e34163eda358b598310d1c&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
-      ],
-      "uploadDate": "2025-10-17T00:00:00.000Z",
-      "fileSize": "10.26 GB"
-    },
-    {
-      "title": "BALL x PIT [build 20076054 + DLC] (2025) PC | RePack от селезень",
-      "uris": [
-        "magnet:?xt=urn:btih:aa8607045bfc4b889762510621961cafd1e1394f&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
-      ],
-      "uploadDate": "2025-10-17T00:00:00.000Z",
-      "fileSize": "1.37 GB"
-    },
-    {
       "title": "Industry Giant 4.0 [v 1.0.1 + DLCs] (2025) PC | Portable от InsaneRamZes",
       "uris": [
         "magnet:?xt=urn:btih:26a3909baf33ba0ad43f9fa07acd25b88221e1ed&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
@@ -191682,36 +191618,12 @@
       "fileSize": "13.51 GB"
     },
     {
-      "title": "Зачарованные Истории 2: ЗаКОТованное королевство / Enchanted Stories 2: PAWisoned Kingdom CE (2025) PC",
-      "uris": [
-        "magnet:?xt=urn:btih:b18c5f6e2dc5112c2c2a1ce51eedf94dd8053745&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
-      ],
-      "uploadDate": "2025-10-17T00:00:00.000Z",
-      "fileSize": "651.78 MB"
-    },
-    {
-      "title": "The Crew 2 - Gold Edition [v 4060652 + DLCs] (2018) PC | Portable от InsaneRamZes",
-      "uris": [
-        "magnet:?xt=urn:btih:946b4ea3ce7f9b4f5f18f15c23bc0a0f6a111fb6&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
-      ],
-      "uploadDate": "2025-10-17T00:00:00.000Z",
-      "fileSize": "35.63 GB"
-    },
-    {
       "title": "Keeper [v 1218000] (2025) PC | Portable от InsaneRamZes",
       "uris": [
         "magnet:?xt=urn:btih:3245f9337ec6845ba15dc3c06e2f8c819bafb1d3&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
       ],
       "uploadDate": "2026-07-29T00:00:00.000Z",
       "fileSize": "24.81 GB"
-    },
-    {
-      "title": "The Crew 2 [v 4060652 + DLCs] (2018) PC | RePack от селезень",
-      "uris": [
-        "magnet:?xt=urn:btih:1401b2b6a1f208b1a62f36120afa687cf2ecebf0&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
-      ],
-      "uploadDate": "2025-10-18T00:00:00.000Z",
-      "fileSize": "27.80 GB"
     },
     {
       "title": "The Crew 2: Gold Edition [v 4060652 + DLCs] (2018) PC | RePack от FitGirl",
@@ -192256,14 +192168,6 @@
       ],
       "uploadDate": "2025-10-31T00:00:00.000Z",
       "fileSize": "17.87 GB"
-    },
-    {
-      "title": "Ninja Gaiden 4 - Deluxe Edition [v 1.0.4.0 + DLCs] (2025) PC | RePack от селезень",
-      "uris": [
-        "magnet:?xt=urn:btih:eeda2f56371a06a80fc63928c467f3cf09d426e6&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
-      ],
-      "uploadDate": "2026-03-04T00:00:00.000Z",
-      "fileSize": "59.73 GB"
     },
     {
       "title": "Railway Empire 2 - Digital Deluxe Edition [v 1.8.0.64729 + DLCs] (2023) PC | RePack от FitGirl",
@@ -193920,14 +193824,6 @@
       ],
       "uploadDate": "2025-12-17T00:00:00.000Z",
       "fileSize": "815.86 MB"
-    },
-    {
-      "title": "Pawn Planet [v 1.0] (2025) PC | RePack от FitGirl",
-      "uris": [
-        "magnet:?xt=urn:btih:b4f3e334bd76cc18db9bed2ac0cf5619f130efe9&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
-      ],
-      "uploadDate": "2025-12-17T00:00:00.000Z",
-      "fileSize": "1.69 GB"
     },
     {
       "title": "SANABI [v 1.3.51 + DLC's] (2023) PC | RePack от FitGirl",
@@ -196018,14 +195914,6 @@
       "fileSize": "7.50 GB"
     },
     {
-      "title": "Don't Starve Together [Build 712852] (2013) PC | RePack от Pioneer",
-      "uris": [
-        "magnet:?xt=urn:btih:982217f84fd06e5a1f6547a8274f36bf965cd8dd&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
-      ],
-      "uploadDate": "2026-02-18T00:00:00.000Z",
-      "fileSize": "2.67 GB"
-    },
-    {
       "title": "Загадки мифов 3: Шепот глубины / Mystery of Myths 3: Whisper of Depth CE (2026) PC",
       "uris": [
         "magnet:?xt=urn:btih:ddd858c2138a62af6afce7931c8dafb9e5ce3cca&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
@@ -196490,6 +196378,46 @@
       "fileSize": "1.89 GB"
     },
     {
+      "title": "BioShock 2 (2010) PC | RePack от селезень",
+      "uris": [
+        "magnet:?xt=urn:btih:08a6b0449698067f06ddfb0eca201e18f4860c56&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
+      ],
+      "uploadDate": "2026-03-03T00:00:00.000Z",
+      "fileSize": "4.44 GB"
+    },
+    {
+      "title": "BioShock Remastered (2016) PC | RePack от селезень",
+      "uris": [
+        "magnet:?xt=urn:btih:6d3d7c57147a3d83c52cf3116b8e6dfeaf891dfa&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
+      ],
+      "uploadDate": "2026-03-03T00:00:00.000Z",
+      "fileSize": "8.33 GB"
+    },
+    {
+      "title": "BioShock 2 Remastered (2016) PC | RePack от селезень",
+      "uris": [
+        "magnet:?xt=urn:btih:5a4d8d9dfe4fad0618201b33a3a5b721b422fb83&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
+      ],
+      "uploadDate": "2026-03-03T00:00:00.000Z",
+      "fileSize": "7.85 GB"
+    },
+    {
+      "title": "BioShock Infinite [v 1.0.1643565 + DLCs] (2013) PC | RePack от селезень",
+      "uris": [
+        "magnet:?xt=urn:btih:840ac74badc085934634cb8cfb60bbc33f2aa04e&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
+      ],
+      "uploadDate": "2026-03-03T00:00:00.000Z",
+      "fileSize": "18.14 GB"
+    },
+    {
+      "title": "Sunbreak War (2026) PC | RePack от FitGirl",
+      "uris": [
+        "magnet:?xt=urn:btih:e35b67e741a5559e472d3d52dce471956fd16674&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
+      ],
+      "uploadDate": "2026-03-03T00:00:00.000Z",
+      "fileSize": "982.85 MB"
+    },
+    {
       "title": "Gotham Knights: Deluxe Edition [build 21284365 + DLCs] (2022) PC | RePack от HardwareMining",
       "uris": [
         "magnet:?xt=urn:btih:dba7b35e1dbc3c6c5ff51ccbfe193cf1827f772b&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
@@ -196544,14 +196472,6 @@
       ],
       "uploadDate": "2026-03-03T00:00:00.000Z",
       "fileSize": "7.56 GB"
-    },
-    {
-      "title": "Ninja Gaiden 4 - Deluxe Edition [v 1.0.4.0 + DLC's] (2025) PC | RePack от FitGirl",
-      "uris": [
-        "magnet:?xt=urn:btih:156c4da21451496e5a9244eb63ab02abf2c505c7&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
-      ],
-      "uploadDate": "2026-03-05T00:00:00.000Z",
-      "fileSize": "41.81 GB"
     },
     {
       "title": "Docked - Deluxe Edition [v 24407588 + DLCs] (2026) PC | Portable от InsaneRamZes",
@@ -200410,14 +200330,6 @@
       "fileSize": "1.07 GB"
     },
     {
-      "title": "The Forever Winter [v 0.1.58130.0 | Early Access] (2024) PC | Portable | Online Only",
-      "uris": [
-        "magnet:?xt=urn:btih:ec952e194cfb76efdc62d097facf63c02871a0d1&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
-      ],
-      "uploadDate": "2026-07-05T00:00:00.000Z",
-      "fileSize": "48.08 GB"
-    },
-    {
       "title": "Nested Lands [v 0.8.0.0 | Early Access] (2026) PC | RePack от Pioneer",
       "uris": [
         "magnet:?xt=urn:btih:18560430a99b57f87027391457ae21ae2c376524&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
@@ -201802,7 +201714,7 @@
       "fileSize": "176.46 MB"
     },
     {
-      "title": "Marvel Tōkon: Fighting Souls [v 1.2.2] (2026) PC | Portable от InsaneRamZes",
+      "title": "Marvel Tōkon: Fighting Souls - Ultimate Edition [v 1.2.2 + DLCs] (2026) PC | Portable от InsaneRamZes",
       "uris": [
         "magnet:?xt=urn:btih:4da9171262edf9bc2f8238bea4fca23300f532ae&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
       ],
@@ -201852,9 +201764,9 @@
     {
       "title": "The Sinking City 2 - Premium Edition [v 24671220] (2026) PC | Portable от InsaneRamZes",
       "uris": [
-        "magnet:?xt=urn:btih:f7a539ea3bb95b523aefdf7319a44dd3255186a5&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
+        "magnet:?xt=urn:btih:366b081b479f5d5d8f1e80962e4b89d878a0b454&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
       ],
-      "uploadDate": "2026-08-15T00:00:00.000Z",
+      "uploadDate": "2026-08-17T00:00:00.000Z",
       "fileSize": "49.22 GB"
     },
     {
@@ -201912,6 +201824,102 @@
       ],
       "uploadDate": "2026-08-17T00:00:00.000Z",
       "fileSize": "39.10 GB"
+    },
+    {
+      "title": "Marvel Tokon: Fighting Souls - Ultimate Edition [v 1.2.2 + DLCs] (2026) PC | RePack от селезень",
+      "uris": [
+        "magnet:?xt=urn:btih:188d57bf26e0cc1b235aabdc0793f606fa6476d5&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
+      ],
+      "uploadDate": "2026-08-17T00:00:00.000Z",
+      "fileSize": "22.78 GB"
+    },
+    {
+      "title": "Cropia (2026) PC | RePack от FitGirl",
+      "uris": [
+        "magnet:?xt=urn:btih:6849ba0f9cf4b1f9501edb426c4c13545a949c14&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
+      ],
+      "uploadDate": "2026-08-17T00:00:00.000Z",
+      "fileSize": "1.05 GB"
+    },
+    {
+      "title": "The Sinking City 2 - Premium Edition [Build 24671220 + DLCs] (2026) PC | RePack от селезень",
+      "uris": [
+        "magnet:?xt=urn:btih:5280afa0b31bc7610a6d600295abde9c7de159e4&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
+      ],
+      "uploadDate": "2026-08-17T00:00:00.000Z",
+      "fileSize": "45.82 GB"
+    },
+    {
+      "title": "Mortal Shell II (2) - Devout Edition [v 92086 + DLCs] (2026) PC | Portable от InsaneRamZes",
+      "uris": [
+        "magnet:?xt=urn:btih:91e5ab6641095481660ebf47ee657572599e701c&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
+      ],
+      "uploadDate": "2026-08-17T00:00:00.000Z",
+      "fileSize": "65.90 GB"
+    },
+    {
+      "title": "Don't Starve Together [Build 747465] (2013) PC | RePack от Pioneer",
+      "uris": [
+        "magnet:?xt=urn:btih:9863bd0a3fe8c8cc391990360e560168e7c8d6e2&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
+      ],
+      "uploadDate": "2026-08-17T00:00:00.000Z",
+      "fileSize": "2.83 GB"
+    },
+    {
+      "title": "The Legend of Mala Tokmachka [build 24763312] (2026) PC | RePack от селезень",
+      "uris": [
+        "magnet:?xt=urn:btih:b1b295d36a2c89fcb51fc4865a4a82366a260b9a&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
+      ],
+      "uploadDate": "2026-08-17T00:00:00.000Z",
+      "fileSize": "210.66 MB"
+    },
+    {
+      "title": "Marvel Tokon: Fighting Souls [v 1.2.2 + DLCs] (2026) PC | RePack от FitGirl",
+      "uris": [
+        "magnet:?xt=urn:btih:a53ef14444544a7ae1b133ea3ddfd63dcc11c978&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
+      ],
+      "uploadDate": "2026-08-17T00:00:00.000Z",
+      "fileSize": "18.38 GB"
+    },
+    {
+      "title": "The Forever Winter [v 0.1.58528.0 | Early Access] (2024) PC | Portable | Online Only",
+      "uris": [
+        "magnet:?xt=urn:btih:73d957098042c40ea8069582c8dbcadc8c9ed748&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
+      ],
+      "uploadDate": "2026-08-17T00:00:00.000Z",
+      "fileSize": "47.33 GB"
+    },
+    {
+      "title": "Heroes of Hammerwatch II [v 151] (2025) PC | RePack от Pioneer",
+      "uris": [
+        "magnet:?xt=urn:btih:0efbe489a6854310ff59d96d15255e4f2172cc44&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
+      ],
+      "uploadDate": "2026-08-17T00:00:00.000Z",
+      "fileSize": "241.42 MB"
+    },
+    {
+      "title": "Mortal Shell II - Devout Edition [v 92086 + DLCs] (2026) PC | RePack от селезень",
+      "uris": [
+        "magnet:?xt=urn:btih:2964db435fd79789920144b95c3511c2b256412f&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
+      ],
+      "uploadDate": "2026-08-17T00:00:00.000Z",
+      "fileSize": "62.83 GB"
+    },
+    {
+      "title": "The Sinking City 2: Premium Edition [Build 24671220 + DLCs] (2026) PC | RePack от FitGirl",
+      "uris": [
+        "magnet:?xt=urn:btih:6ea967cbbbf7584abe2938ad5716de1f0076e177&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
+      ],
+      "uploadDate": "2026-08-18T00:00:00.000Z",
+      "fileSize": "38.62 GB"
+    },
+    {
+      "title": "Mortal Shell II - Devout Edition [v 92086 + DLCs] (2026) PC | RePack от FitGirl",
+      "uris": [
+        "magnet:?xt=urn:btih:390bc93583e1cfd88e53a94437965c2a2eddf862&dn=rutor.info&tr=udp://opentor.net:6969&tr=http://retracker.local/announce"
+      ],
+      "uploadDate": "2026-08-18T00:00:00.000Z",
+      "fileSize": "51.35 GB"
     }
   ]
 }

@@ -4,7 +4,8 @@
  * Sibling of itorrents-igruha.mjs, same operator (byigruha). Differences:
  *   - UTF-8 pages (plain getText), not windows-1251.
  *   - Enumeration is a two-step sitemap: sitemap.xml is an index -> the games
- *     live in the news_pages.xml sub-sitemap (100% full-ISO <lastmod>).
+ *     live in the news_pages*.xml sub-sitemaps (split every 10 000 urls:
+ *     news_pages.xml, news_pages2.xml, …; 100% full-ISO <lastmod>).
  *   - The torrent link `index.php?do=download&id=N` serves the .torrent directly
  *     but requires a Referer header (the game page) or it 302s "Access denied".
  *   - HTML entities in the <h1> title (&#039; etc.) are decoded.
@@ -17,6 +18,7 @@ import { readFile, writeFile } from "node:fs/promises";
 import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 import { getBuffer, getText, mapPool, sleep } from "../lib/net.mjs";
+import { assertSaneCount, collectSitemapUrls } from "../lib/sitemap.mjs";
 import { torrentToMagnet } from "../lib/torrent.mjs";
 import { parseVariants, toDownloads } from "../lib/variants.mjs";
 
@@ -58,23 +60,14 @@ const decodeEntities = (s) =>
 const clean = (s) =>
   decodeEntities(s.replace(/<[^>]+>/g, " ")).replace(/\s+/g, " ").trim();
 
-/** Game pages: sitemap.xml is an index; games live in the news sub-sitemap. */
+/**
+ * Game pages: sitemap.xml is an index; games live in the news_pages*.xml
+ * children. Every child is walked (taking only the first one silently cut the
+ * list to 9 996 when the site split it) and non-game urls drop out on the pattern.
+ */
 async function listGamePages() {
-  const index = await getText(`${SITE}/sitemap.xml`, { ms: 30000 });
-  const newsLoc = [...index.matchAll(/<loc>([^<]+)<\/loc>/g)]
-    .map((m) => m[1])
-    .find((u) => /news[_-]?pages/i.test(u));
-  const xml = newsLoc ? await getText(newsLoc, { ms: 30000 }) : index;
-
-  const out = [];
-  for (const block of xml.matchAll(/<url>([\s\S]*?)<\/url>/g)) {
-    const b = block[1];
-    const url = (b.match(/<loc>([^<]+)<\/loc>/) || [])[1];
-    if (!url || !/\/\d+-[^/]+\.html$/.test(url)) continue;
-    const lastmod = (b.match(/<lastmod>([^<]+)<\/lastmod>/) || [])[1] || "";
-    out.push({ url, lastmod });
-  }
-  return out;
+  const all = await collectSitemapUrls(`${SITE}/sitemap.xml`);
+  return all.filter(({ url }) => /\/\d+-[^/]+\.html$/.test(url));
 }
 
 // Retried within a run and re-fetched next run. Genuine outcomes
@@ -179,6 +172,10 @@ async function readState() {
 async function main() {
   let pages = await listGamePages();
   console.log(`[repack] sitemap: ${pages.length} game pages`);
+  // Read the state up front and sanity-check the list against it BEFORE any
+  // write: an empty/collapsed sitemap must not wipe the state or the feed.
+  const prev = await readState();
+  assertSaneCount("repack", pages.length, Object.keys(prev).length);
   if (SAMPLE) {
     pages = spreadSample(pages, SAMPLE);
     console.log(`[repack] SAMPLE=${SAMPLE} -> spread across the sitemap`);
@@ -187,7 +184,6 @@ async function main() {
     console.log(`[repack] LIMIT=${LIMIT} -> processing ${pages.length}`);
   }
 
-  const prev = await readState();
   const toFetch = [];
   const nextState = {};
   let reused = 0;

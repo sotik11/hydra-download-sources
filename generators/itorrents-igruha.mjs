@@ -21,7 +21,8 @@
 import { readFile, writeFile } from "node:fs/promises";
 import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
-import { getBuffer, getText, mapPool, sleep } from "../lib/net.mjs";
+import { getBuffer, mapPool, sleep } from "../lib/net.mjs";
+import { assertSaneCount, collectSitemapUrls } from "../lib/sitemap.mjs";
 import { torrentToMagnet } from "../lib/torrent.mjs";
 import { parseVariants, toDownloads } from "../lib/variants.mjs";
 
@@ -68,19 +69,16 @@ const decodeEntities = (s) =>
 const clean = (s) =>
   decodeEntities(s.replace(/<[^>]+>/g, " ")).replace(/\s+/g, " ").trim();
 
-/** Game pages from the sitemap: [{ url, lastmod }] for /{id}-slug.html. */
+/**
+ * Game pages from the sitemap: [{ url, lastmod }] for /{id}-slug.html.
+ * sitemap.xml is an index (sitemap-games-N + sitemap-fresh + sitemap-pages);
+ * every child is walked and non-game urls drop out on the pattern.
+ */
 async function listGamePages() {
-  const xml = await getText(`${SITE}/sitemap.xml`, { ms: 30000 });
-  const out = [];
-  for (const block of xml.matchAll(/<url>([\s\S]*?)<\/url>/g)) {
-    const b = block[1];
-    const url = (b.match(/<loc>([^<]+)<\/loc>/) || [])[1];
-    if (!url || !/\/\d+-[^/]+\.html$/.test(url) || /-download\.html$/.test(url))
-      continue;
-    const lastmod = (b.match(/<lastmod>([^<]+)<\/lastmod>/) || [])[1] || "";
-    out.push({ url, lastmod });
-  }
-  return out;
+  const all = await collectSitemapUrls(`${SITE}/sitemap.xml`);
+  return all.filter(
+    ({ url }) => /\/\d+-[^/]+\.html$/.test(url) && !/-download\.html$/.test(url)
+  );
 }
 
 // Retried within a run and re-fetched next run. Genuine outcomes
@@ -184,6 +182,10 @@ async function readState() {
 async function main() {
   let pages = await listGamePages();
   console.log(`[igruha] sitemap: ${pages.length} game pages`);
+  // Read the state up front and sanity-check the list against it BEFORE any
+  // write: an empty/collapsed sitemap must not wipe the state or the feed.
+  const prev = await readState();
+  assertSaneCount("igruha", pages.length, Object.keys(prev).length);
   if (SAMPLE) {
     pages = spreadSample(pages, SAMPLE);
     console.log(`[igruha] SAMPLE=${SAMPLE} -> spread across the sitemap`);
@@ -195,7 +197,6 @@ async function main() {
   // Incremental: reuse cached entries whose sitemap lastmod is unchanged; only
   // (re)fetch new or modified pages. State keeps no-torrent pages too (as
   // download:null) so they aren't re-fetched every run until they change.
-  const prev = await readState();
   const toFetch = [];
   const nextState = {};
   let reused = 0;

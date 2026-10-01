@@ -8,8 +8,9 @@
 #
 # Each generator is incremental (keeps data/<src>.state.json on disk): first run
 # is a full rebuild, later runs touch a few hundred pages. Per source there is a
-# <50%-collapse guard so a blocked/throttled run never guts a good feed. Both
-# feeds go in one commit / one push.
+# collapse guard (feed lost more than MAX_DROP_PCT in one run -> revert feed AND
+# state) so a blocked/throttled run or a site-layout change never guts a good
+# feed. Both feeds go in one commit / one push.
 #
 # Output teed to refresh_local.log (gitignored). Start/finish as Windows toasts
 # via notify.ps1 (best-effort — never fail the refresh).
@@ -52,6 +53,11 @@ count() { # entries in a feed file, 0 if missing/broken
 # source name == generator file == feed file (data/<name>.json)
 SOURCES="itorrents-igruha repack-igruha"
 
+# An incremental feed barely moves day to day, so a bigger one-run loss is a bug
+# (sitemap split, layout change, block), not reality. 50% used to be the bar and
+# let a -26% truncation through.
+MAX_DROP_PCT=15
+
 echo ""
 echo "######## download-sources refresh $(date '+%Y-%m-%d %H:%M:%S %z') ########"
 notify "Игрухи refresh — старт" "Обновляю: $SOURCES"
@@ -70,24 +76,34 @@ fi
 TOAST=""; TG=""; SEP=""   # TG: one source per line, "<u>name</u> — +N (was → now)"
 for src in $SOURCES; do
   feed="data/$src.json"
+  state="data/$src.state.json"
   before=$(count "$feed")
   echo "=== 2. generate: $src (was $before) ==="
+  # Snapshot the incremental state: a reverted feed must get its state back too,
+  # or the next run "reuses" the broken state and re-fetches everything.
+  [ -f "$state" ] && cp -f "$state" "$state.backup"
   RATE=10 POOL=4 node "generators/$src.mjs"
   rc=$?
   after=$(count "$feed")
 
-  if [ "$rc" -ne 0 ]; then
-    echo "  !! $src exited $rc — reverting its feed"
+  revert() { # put back the committed feed and the pre-run state
     git checkout -- "$feed" 2>/dev/null
+    [ -f "$state.backup" ] && cp -f "$state.backup" "$state"
+  }
+
+  if [ "$rc" -ne 0 ]; then
+    echo "  !! $src exited $rc — reverting its feed and state"
+    revert
     TOAST="$TOAST${SEP}$src: ошибка ($rc)"; SEP=" · "
-    TG="${TG:+$TG$NL}<u>$src</u> — ошибка ($rc)"
+    TG="${TG:+$TG$NL}<u>$src</u> — ошибка ($rc), откат"
     continue
   fi
-  if [ "$before" -gt 0 ] && [ "$after" -lt $((before / 2)) ]; then
-    echo "  !! $src collapsed ($after < 50% of $before) — reverting"
-    git checkout -- "$feed" 2>/dev/null
-    TOAST="$TOAST${SEP}$src: обвал ($after<50%), откат"; SEP=" · "
-    TG="${TG:+$TG$NL}<u>$src</u> — обвал ($after), откат"
+  floor=$(( before * (100 - MAX_DROP_PCT) / 100 ))
+  if [ "$before" -gt 0 ] && [ "$after" -lt "$floor" ]; then
+    echo "  !! $src collapsed ($after < $floor = -${MAX_DROP_PCT}% of $before) — reverting feed and state"
+    revert
+    TOAST="$TOAST${SEP}$src: обвал ($before→$after), откат"; SEP=" · "
+    TG="${TG:+$TG$NL}<u>$src</u> — обвал ($before → $after), откат"
     continue
   fi
 

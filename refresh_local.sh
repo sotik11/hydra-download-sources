@@ -58,6 +58,9 @@ SOURCES="itorrents-igruha repack-igruha"
 # let a -26% truncation through.
 MAX_DROP_PCT=15
 
+# Pause before the single rerun of a generator that exited non-zero.
+RETRY_PAUSE=120
+
 echo ""
 echo "######## download-sources refresh $(date '+%Y-%m-%d %H:%M:%S %z') ########"
 notify "Игрухи refresh — старт" "Обновляю: $SOURCES"
@@ -82,14 +85,24 @@ for src in $SOURCES; do
   # Snapshot the incremental state: a reverted feed must get its state back too,
   # or the next run "reuses" the broken state and re-fetches everything.
   [ -f "$state" ] && cp -f "$state" "$state.backup"
-  RATE=10 POOL=4 node "generators/$src.mjs"
-  rc=$?
-  after=$(count "$feed")
 
   revert() { # put back the committed feed and the pre-run state
     git checkout -- "$feed" 2>/dev/null
     [ -f "$state.backup" ] && cp -f "$state.backup" "$state"
   }
+
+  RATE=10 POOL=4 node "generators/$src.mjs"
+  rc=$?
+  if [ "$rc" -ne 0 ]; then
+    # One patient retry: a site that is down for a minute (connect timeout)
+    # must not cost the whole day. Start the rerun from the pre-run feed/state.
+    echo "  !! $src exited $rc — retrying once in ${RETRY_PAUSE}s"
+    revert
+    sleep "$RETRY_PAUSE"
+    RATE=10 POOL=4 node "generators/$src.mjs"
+    rc=$?
+  fi
+  after=$(count "$feed")
 
   if [ "$rc" -ne 0 ]; then
     echo "  !! $src exited $rc — reverting its feed and state"

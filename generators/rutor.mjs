@@ -51,6 +51,7 @@ const POOL = Number(process.env.POOL) || 6;
 const RATE = Number(process.env.RATE) || 0;
 const MAX_PAGE = 400; // safety cap for the incremental/full walk
 const STOP_STREAK = 2; // stop after this many consecutive all-known pages
+const END_STREAK = 3; // this many empty pages in a row = past the last page
 
 const gapMs = RATE > 0 ? 1000 / RATE : 0;
 let nextSlot = 0;
@@ -194,6 +195,7 @@ async function main() {
   let filtered = 0;
   let walked = 0;
   let knownStreak = 0;
+  let emptyStreak = 0;
 
   for (let page = 0; page < limit; page += 1) {
     let res;
@@ -205,7 +207,16 @@ async function main() {
       break; // walk: treat as the end, keep what we have
     }
     walked += 1;
-    if (res.total === 0) break; // walked past the last page
+    // An empty page is not always the end: rutor sometimes renders a single page
+    // in the middle without its table (seen 2026-10-19: page 81 of ~286 empty,
+    // 82+ fine). Only END_STREAK empty pages in a row mean we walked past the end.
+    if (res.total === 0) {
+      emptyStreak += 1;
+      if (emptyStreak >= END_STREAK) break;
+      console.warn(`[rutor] page ${page} is empty — site glitch? checking the next one`);
+      continue;
+    }
+    emptyStreak = 0;
 
     let pageNew = 0;
     for (const row of res.kept) {
